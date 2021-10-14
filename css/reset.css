@@ -20,6 +20,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
+	font-weight: unset;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -47,4 +48,14 @@ table {
 }
 a {
 	text-decoration: none;
+}
+button {
+	border: none;
+	background-color: transparent;
+	padding: unset;
+}
+
+button:focus,
+button:focus-visible {
+	outline: none;
 }
