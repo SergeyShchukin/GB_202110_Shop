@@ -1,0 +1,294 @@
+/* main-start */
+/* brand-start */
+.brand {
+	display: flex;
+	position: relative;
+}
+
+.brand__wrp {
+	background-color: var(--light-pink);
+	flex-grow: 1;
+	padding: 0 0 0 76px;
+	display: flex;
+	align-items: center;
+}
+
+.brand__wrp::before {
+	content: ' ';
+	width: 12px;
+	height: 92px;
+	background-color: var(--pink);
+	margin: 0px 16px 0px -12px;
+}
+
+.brand__title {
+	font-size: 48px;
+	font-family: Lato-Black;
+	line-height: 58px;
+	text-transform: uppercase;
+}
+
+.brand__subtitle {
+	display: flex;
+	font-size: 32px;
+	font-family: Lato-Black;
+	line-height: 38px;
+}
+
+.brand__subtitle-pink {
+	color: var(--pink);
+}
+/* brand-end */
+
+/* sales-start */
+.sales {
+	margin: 63px auto;
+}
+
+.sales__list {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.sales__item {
+	width: 360px;
+	height: 260px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.sales__item::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--reddish-black);
+	opacity: 0.7;
+	z-index: 1;
+}
+
+.sales__item:focus {
+	outline: var(--outline-focus);
+}
+
+.sales__item:hover {
+	opacity: 0.5;
+}
+
+.sales__item--women {
+	background-image: url('../img/bg-women.jpg');
+}
+
+.sales__item--men {
+	background-image: url('../img/bg-man.jpg');
+}
+
+.sales__item--kids {
+	background-image: url('../img/bg-kid.jpg');
+}
+
+.sales__item--accesories {
+	width: 100%;
+	height: 180px;
+	margin: 30px 0px 0px 0px;
+	background-image: url('../img/bg-accesories.jpg');
+}
+
+.sales__description {
+	z-index: 2;
+}
+
+.sales__text {
+	font-size: 16px;
+	line-height: 19px;
+	text-align: center;
+	text-transform: uppercase;
+	color: var(--white);
+}
+
+.sales__item-title {
+	font-family: Lato-Bold;
+	font-size: 24px;
+	line-height: 29px;
+	text-align: center;
+	text-transform: uppercase;
+	color: var(--pink);
+}
+/* sales-end */
+
+/* products-start */
+.products {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 34px auto 95px auto;
+}
+
+.products__title {
+	font-size: 30px;
+	line-height: 36px;
+	font-family: Lato;
+	color: var(--black);
+}
+
+.products__title-desc {
+	font-size: 14px;
+	line-height: 17px;
+	font-family: Lato;
+	color: var(--light-gray);
+	margin: 6px auto 18px auto;
+}
+
+.products__list {
+	display: flex;
+	flex-wrap: wrap;
+	height: 1192px;
+	justify-content: space-between;
+	align-content: space-between;
+	margin: 30px auto 48px auto;
+}
+
+.product {
+	height: 581px;
+	width: 360px;
+	background-color: var(--very-dark-white);
+}
+
+.product__image-box {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--gray-hover);
+}
+
+.product__image {
+	z-index: 2;
+}
+
+.product__image-box:hover .product__image {
+	z-index: 0;
+	opacity: var(--opacity-hover);
+}
+
+.product__btn {
+	position: absolute;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	width: 138px;
+	height: 43px;
+}
+
+.product__btn:focus {
+	z-index: 5;
+}
+
+.product__btn::before {
+	content: url(../img/white-basket.svg);
+	width: 27px;
+	height: 25px;
+}
+
+.product__btn-text {
+	color: var(--white);
+	font-size: 14px;
+	line-height: 17px;
+	font-family: Lato;
+}
+
+.product__info {
+	padding: 25px 28px 20px 17px;
+}
+
+.product__title {
+	font-size: 13px;
+	font-family: Lato;
+	line-height: 16px;
+	text-transform: uppercase;
+}
+
+.product__desc {
+	font-size: 14px;
+	line-height: 17px;
+	color: var(--very-gray);
+	margin: 13px auto 18px auto;
+}
+
+.product__price {
+	font-size: 16px;
+	font-family: Lato;
+	line-height: 19px;
+	color: var(--pink);
+}
+
+.products__btn {
+	height: 47px;
+	width: 211px;
+}
+/* products-end */
+
+/* offers-start */
+.offers {
+	background-color: var(--bluish-black);
+}
+
+.offers__list {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 341px;
+}
+
+.offers__item {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: 360px;
+}
+
+.offers__item--truck::before {
+	content: url(../img/truck.svg);
+	width: 46px;
+	height: 32px;
+	margin-bottom: 28px;
+}
+
+.offers__item--percent::before {
+	content: url(../img/percent.svg);
+	width: 40px;
+	height: 40px;
+	margin-bottom: 19px;
+}
+
+.offers__item--crown::before {
+	content: url(../img/crown.svg);
+	width: 48px;
+	height: 35px;
+	margin-bottom: 25px;
+}
+
+.offers__item-title {
+	font-size: 20px;
+	font-family: Lato;
+	line-height: 24px;
+	color: var(--dark-white);
+	margin-bottom: 16px;
+}
+
+.offers__item-desc {
+	font-size: 14px;
+	line-height: 17px;
+	color: var(--dark-white);
+	padding: 0px 30px;
+	text-align: center;
+}
+/* offers-end */
+/* main-end */
