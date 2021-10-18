@@ -1,0 +1,69 @@
+.purchase-form {
+	margin-left: 64px;
+	margin-top: 113px;
+	width: 360px;
+
+	&__checkout {
+		box-sizing: border-box;
+		width: 100%;
+		height: 214px;
+		padding-top: 39px;
+		background-color: $light-gray-cart;
+
+		&-wrp {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			&::before {
+				content: '';
+				height: 1px;
+				width: 275px;
+				background-color: $light-gray-cart-border;
+			}
+		}
+
+		&-total {
+			display: block;
+			text-align: right;
+
+			&--sub {
+				@include font($font-size: 11px, $line-height: 13px, $text-transform: true);
+				color: $light-black-cart;
+				margin: 0 34px 12px 0;
+			}
+
+			&--grand {
+				@include font($font-family: Lato-Light, $font-size: 16px, $line-height: 19px, $text-transform: true);
+				color: $black;
+				margin: 0 37px 21px 0;
+			}
+
+			&-value {
+				border: none;
+				text-align: right;
+
+				&--sub {
+					width: 40px;
+					@include font($font-size: 11px, $line-height: 13px, $text-transform: true);
+					color: $light-black-cart;
+				}
+
+				&--grand {
+					width: 50px;
+					color: $pink;
+					@include font($font-family: Lato-Bold, $font-size: 16px, $line-height: 19px, $text-transform: true);
+				}
+			}
+		}
+
+		&-btn {
+			@include font($font-family: Lato-Light, $font-size: 16px, $line-height: 19px, $text-transform: true);
+			@include btn(false);
+			height: 50px;
+			width: 273px;
+			margin-top: 17px;
+		}
+	}
+}

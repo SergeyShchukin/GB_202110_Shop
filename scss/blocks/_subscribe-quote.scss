@@ -1,0 +1,18 @@
+.subscribe-quote {
+	z-index: 2;
+	@include flex-center();
+	flex-direction: column;
+	margin-bottom: 20px;
+
+	&__text {
+		width: 360px;
+		height: 99px;
+		margin-top: 30px;
+		text-align: center;
+		@include font($font-size: 20px, $line-height: 24px);
+
+		&--italic {
+			font-family: Lato-Italic;
+		}
+	}
+}

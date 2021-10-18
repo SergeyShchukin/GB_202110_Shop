@@ -1,0 +1,42 @@
+.subscribe-form {
+	z-index: 2;
+	margin-right: 50px;
+
+	&__legend {
+		@include flex-center();
+		flex-direction: column;
+		margin-right: 50px;
+		color: $bluish-black;
+
+		&-title {
+			@include font($font-family: Lato-Bold, $font-size: 24px, $line-height: 40px, $text-transform: true);
+		}
+
+		&-desc {
+			@include font($font-size: 18px, $line-height: 28px, $text-transform: true);
+			margin-bottom: 32px;
+		}
+	}
+
+	&__controls {
+		display: flex;
+
+		&-input {
+			// не могу понять, почему не действует стиль шрифта body.page для инпута (его переопределяет user agent stylesheet). Приходится явно проставлять font()
+			@include font();
+			padding: 7px 22px;
+			border-radius: 25px 0 0 25px;
+			height: 35px;
+			width: 212px;
+			@include text-input($bkg-color: $light-gray-input, $placeholder-color: $bluish-black);
+		}
+
+		&-btn {
+			@include font();
+			@include btn($transparent: false);
+			border-radius: 0 25px 25px 0;
+			height: 49px;
+			width: 100px;
+		}
+	}
+}

@@ -1,0 +1,48 @@
+.offers {
+	background-color: $bluish-black;
+
+	&__list {
+		@include flex-center($justify-content: space-between);
+		height: 341px;
+	}
+
+	&__item {
+		@include flex-center();
+		flex-direction: column;
+		width: 360px;
+
+		&--truck::before {
+			content: url(../img/truck.svg);
+			width: 46px;
+			height: 32px;
+			margin-bottom: 28px;
+		}
+
+		&--percent::before {
+			content: url(../img/percent.svg);
+			width: 40px;
+			height: 40px;
+			margin-bottom: 19px;
+		}
+
+		&--crown::before {
+			content: url(../img/crown.svg);
+			width: 48px;
+			height: 35px;
+			margin-bottom: 25px;
+		}
+
+		&-title {
+			@include font($font-size: 20px, $line-height: 24px);
+			color: $dark-white;
+			margin-bottom: 16px;
+		}
+
+		&-desc {
+			@include font($font-family: Lato-Light);
+			color: $dark-white;
+			padding: 0 30px;
+			text-align: center;
+		}
+	}
+}

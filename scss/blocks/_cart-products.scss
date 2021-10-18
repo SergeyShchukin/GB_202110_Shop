@@ -1,0 +1,27 @@
+.cart-products {
+	min-width: 652px;
+	margin-top: 96px;
+	margin-right: 64px;
+
+	&__item {
+		margin-bottom: 40px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__controls {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 73px;
+		margin-bottom: 128px;
+	}
+
+	&__btn {
+		@include btn();
+		@include font($font-family: Lato-Light, $text-transform: true);
+		height: 49px;
+		width: 229px;
+	}
+}

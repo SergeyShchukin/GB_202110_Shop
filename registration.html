@@ -4,12 +4,9 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Shop</title>
+		<title>Shop - registration</title>
 		<link rel="stylesheet" href="./fonts/fonts.css" />
-		<link rel="stylesheet" href="./css/reset.css" />
-		<link rel="stylesheet" href="./css/styles.css" />
-		<link rel="stylesheet" href="./css/registration-styles.css" />
-		<script src="scripts/index.js"></script>
+		<link rel="stylesheet" href="./css/style.css" />
 	</head>
 	<body class="page">
 		<!-- svg-sprite-start -->
@@ -54,7 +51,7 @@
 						/>
 					</g>
 					<defs>
-						<clipPath id="clip0">
+						<clipPath id="clip0-instagram">
 							<rect width="14.8991" height="17" fill="white" transform="translate(8.68555 8)" />
 						</clipPath>
 					</defs>
@@ -68,7 +65,7 @@
 						/>
 					</g>
 					<defs>
-						<clipPath id="clip0">
+						<clipPath id="clip0-pinterest">
 							<rect width="11.9193" height="16" fill="white" transform="translate(10.4082 8)" />
 						</clipPath>
 					</defs>
@@ -82,7 +79,7 @@
 						/>
 					</g>
 					<defs>
-						<clipPath id="clip0">
+						<clipPath id="clip0-twitter">
 							<rect width="15.8924" height="16" fill="white" transform="translate(8.1582 8)" />
 						</clipPath>
 					</defs>
@@ -95,16 +92,16 @@
 			<div class="container header__wrp">
 				<div class="header__wrp-controls">
 					<a class="header__logo" href="index.html">
-						<img src="./img/logo.svg" alt="logo" />
+						<img src="./img/logo.svg" alt="logo" width="44" height="38" />
 					</a>
 					<button class="header__btn" type="button" id="search-btn">
 						<svg class="header__svg header__svg--search">
 							<use xlink:href="#loupe"></use>
 						</svg>
 					</button>
-					<form class="search" action="" id="search-form">
-						<label class="search__label visually-hidden" for="seacrh">поиск</label>
-						<input class="search__input" type="search" placeholder="Search" id="search-inp" />
+					<form class="header__search-form display-hide" action="" id="search-form">
+						<label class="header__search-form-label visually-hidden" for="search-inp">поиск</label>
+						<input class="header__search-form-input" type="search" name="search" placeholder="Search" id="search-inp" />
 					</form>
 				</div>
 				<nav class="header__wrp-controls">
@@ -118,81 +115,81 @@
 							<use xlink:href="#person"></use>
 						</svg>
 					</a>
-					<a class="header__link" href="#">
-						<div class="header-basket">
+					<a class="header__link" href="cart.html">
+						<div class="header__basket">
 							<svg class="header__svg header__svg--basket">
 								<use xlink:href="#basket"></use>
 							</svg>
-							<div class="header-basket__count" id="basket__count">0</div>
+							<div class="header__basket-count" id="basket-count">0</div>
 						</div>
 					</a>
 				</nav>
 			</div>
-			<nav class="header__nav" id="menu">
-				<button class="header__nav-btn" type="button" id="close-menu-btn">
-					<svg class="header__nav-btn--close">
+			<nav class="nav-menu display-hide" id="menu">
+				<button class="nav-menu__btn" type="button" id="close-menu-btn">
+					<svg class="nav-menu__btn-svg">
 						<use xlink:href="#close"></use>
 					</svg>
 				</button>
-				<h2 class="header__nav-title">menu</h2>
-				<ul class="header__menu-list">
-					<li class="header__menu-item menu-item">
-						<h3 class="menu-item__title">man</h3>
-						<ul class="menu-item__sub-list">
-							<li class="menu-item__link">
-								<a href="#"><div class="menu-item__sub-item">Accessories</div></a>
+				<h2 class="nav-menu__title">menu</h2>
+				<ul class="nav-menu__list">
+					<li class="nav-menu__item">
+						<h3 class="nav-menu__item-title">man</h3>
+						<ul class="nav-menu__item-sub-list">
+							<li class="nav-menu__link">
+								<a href="#"><div class="nav-menu__item-sub-item">Accessories</div></a>
 							</li>
-							<li class="menu-item__link">
-								<a href="#"><div class="menu-item__sub-item">Bags</div></a>
+							<li class="nav-menu__link">
+								<a href="#"><div class="nav-menu__item-sub-item">Bags</div></a>
 							</li>
-							<li class="menu-item__link">
-								<a href="#"><div class="menu-item__sub-item">Denim</div></a>
+							<li class="nav-menu__link">
+								<a href="#"><div class="nav-menu__item-sub-item">Denim</div></a>
 							</li>
-							<li class="menu-item__link">
-								<a href="#"><div class="menu-item__sub-item">T-Shirts</div></a>
-							</li>
-						</ul>
-					</li>
-					<li class="header__menu-item menu-item">
-						<h3 class="menu-item__title">woman</h3>
-						<ul class="menu-item__sub-list">
-							<li class="menu-item__link">
-								<a href="#"><div class="menu-item__sub-item">Accessories</div></a>
-							</li>
-							<li class="menu-item__link">
-								<a href="#"><div class="menu-item__sub-item">Jackets & Coats</div></a>
-							</li>
-							<li class="menu-item__link">
-								<a href="#"><div class="menu-item__sub-item">Polos</div></a>
-							</li>
-							<li class="menu-item__link">
-								<a href="#"><div class="menu-item__sub-item">T-Shirts</div></a>
-							</li>
-							<li class="menu-item__link">
-								<a href="#"><div class="menu-item__sub-item">Shirts</div></a>
+							<li class="nav-menu__link">
+								<a href="#"><div class="nav-menu__item-sub-item">T-Shirts</div></a>
 							</li>
 						</ul>
 					</li>
-					<li class="header__menu-item menu-item">
-						<h3 class="menu-item__title">kids</h3>
-						<ul class="menu-item__sub-list">
-							<li class="menu-item__link">
-								<a href="#"><div class="menu-item__sub-item">Accessories</div></a>
+					<li class="nav-menu__item menu-item">
+						<h3 class="nav-menu__item-title">woman</h3>
+						<ul class="nav-menu__item-sub-list">
+							<li class="nav-menu__link">
+								<a href="#"><div class="nav-menu__item-sub-item">Accessories</div></a>
 							</li>
-							<li class="menu-item__link">
-								<a href="#"><div class="menu-item__sub-item">Jackets & Coats</div></a>
+							<li class="nav-menu__link">
+								<a href="#"><div class="nav-menu__item-sub-item">Jackets & Coats</div></a>
 							</li>
-							<li class="menu-item__link">
-								<a href="#"><div class="menu-item__sub-item">Polos</div></a>
+							<li class="nav-menu__link">
+								<a href="#"><div class="nav-menu__item-sub-item">Polos</div></a>
 							</li>
-							<li class="menu-item__link">
-								<a href="#"><div class="menu-item__sub-item">T-Shirts</div></a>
+							<li class="nav-menu__link">
+								<a href="#"><div class="nav-menu__item-sub-item">T-Shirts</div></a>
 							</li>
-							<li class="menu-item__link">
-								<a href="#"><div class="menu-item__sub-item">Shirts</div></a>
+							<li class="nav-menu__link">
+								<a href="#"><div class="nav-menu__item-sub-item">Shirts</div></a>
 							</li>
-							<li class="menu-item__link">
-								<a href="#"><div class="menu-item__sub-item">Bags</div></a>
+						</ul>
+					</li>
+					<li class="nav-menu__item menu-item">
+						<h3 class="nav-menu__item-title">kids</h3>
+						<ul class="nav-menu__item-sub-list">
+							<li class="nav-menu__link">
+								<a href="#"><div class="nav-menu__item-sub-item">Accessories</div></a>
+							</li>
+							<li class="nav-menu__link">
+								<a href="#"><div class="nav-menu__item-sub-item">Jackets & Coats</div></a>
+							</li>
+							<li class="nav-menu__link">
+								<a href="#"><div class="nav-menu__item-sub-item">Polos</div></a>
+							</li>
+							<li class="nav-menu__link">
+								<a href="#"><div class="nav-menu__item-sub-item">T-Shirts</div></a>
+							</li>
+							<li class="nav-menu__link">
+								<a href="#"><div class="nav-menu__item-sub-item">Shirts</div></a>
+							</li>
+							<li class="nav-menu__link">
+								<a href="#"><div class="nav-menu__item-sub-item">Bags</div></a>
 							</li>
 						</ul>
 					</li>
@@ -200,39 +197,43 @@
 			</nav>
 		</header>
 		<main class="main">
-			<section class="registration">
+			<section class="page-header">
 				<div class="container">
-					<h1 class="registration__title">registration</h1>
+					<h1 class="page-header__title">registration</h1>
 				</div>
 			</section>
-			<div class="container registration__wrp">
-				<section>
-					<form class="registration-form" action="">
-						<fieldset>
-							<legend>Your Name</legend>
+			<div class="container flex-wrp">
+				<section class="registration">
+					<h2 class="visually-hidden">registration form</h2>
+					<form class="registration__form" action="">
+						<fieldset class="registration__wrp">
+							<legend class="registration__form-title">Your Name</legend>
 							<label class="visually-hidden" for="first-name">First Name</label>
-							<input type="text" placeholder="First Name" id="first-name" />
+							<input class="registration__form-input" type="text" name="first-name" placeholder="First Name" id="first-name" />
 							<label class="visually-hidden" for="last-name">Last Name</label>
-							<input type="text" placeholder="Last Name" id="last-name" />
-							<label class="visually-hidden" for="male">Male</label>
-							<input type="radio" name="gender" id="male" value="male" />
-							<label class="visually-hidden" for="female">Female</label>
-							<input type="radio" name="gender" id="female" value="female" />
+							<input class="registration__form-input" type="text" name="last-name" placeholder="Last Name" id="last-name" />
 						</fieldset>
-						<fieldset>
-							<legend>Login details</legend>
-							<label class="visually-hidden" for="email">email</label>
-							<input type="email" placeholder="Email" id="email" required />
-							<input type="password" placeholder="Password" id="password" required />
-							<label for="password">
-								<p>Please use 8 or more characters, with at least 1 number and a mixture of uppercase and lowercase letters</p>
+						<fieldset class="gender-box">
+							<legend class="visually-hidden gender-box__title">gender</legend>
+							<input class="gender-box__input" type="radio" name="gender" id="male" value="male" />
+							<label class="gender-box__label" for="male">Male</label>
+							<input class="gender-box__input" type="radio" name="gender" id="female" value="female" />
+							<label class="gender-box__label" for="female">Female</label>
+						</fieldset>
+						<fieldset class="registration__wrp">
+							<legend class="registration__form-title">Login details</legend>
+							<label class="visually-hidden" for="reg-email">email</label>
+							<input class="registration__form-input" type="email" name="email" placeholder="Email" id="reg-email" required />
+							<input class="registration__form-input" type="password" name="password" placeholder="Password" id="password" required />
+							<label class="registration__form-label" for="password"
+								>Please use 8 or more characters, with at least 1 number and a mixture of uppercase and lowercase letters
 							</label>
 						</fieldset>
-						<button type="submit">join now</button>
+						<button class="registration__form-btn" type="submit"><span>join now</span></button>
 					</form>
 				</section>
 				<section class="loyalty">
-					<h1 class="loyalty__title">loyalty has its perks</h1>
+					<h2 class="loyalty__title">loyalty has its perks</h2>
 					<p class="loyalty__desc">
 						Get in on the loyalty program where you can earn points and unlock serious perks. Starting with these as soon as you join:
 					</p>
@@ -248,64 +249,64 @@
 		</main>
 		<footer class="footer">
 			<section class="subscribe">
-				<div class="container subscribe-wrp">
+				<h2 class="visually-hidden">subscribe container</h2>
+				<div class="container subscribe__wrp">
 					<article class="subscribe-quote">
-						<img class="subscribe-quote__img" src="./img/women.png" alt="women" />
+						<h3 class="visually-hidden">subscribe quote</h3>
+						<img class="subscribe-quote__img" src="./img/women.png" alt="women" width="96" height="96" />
 						<p class="subscribe-quote__text">
 							“Vestibulum quis porttitor dui! Quisque viverra nunc mi,&nbsp;
-							<span class="subscribe-quote__text--italic">a pulvinar purus condimentum“</span>
+							<span class="subscribe-quote__text subscribe-quote__text--italic">a pulvinar purus condimentum“</span>
 						</p>
 					</article>
-					<div class="subscribe-form">
-						<form action="">
-							<legend class="subscribe-form__legend">
-								<h2 class="subscribe-form__title">subscribe</h2>
-								<p class="subscribe-form__desc">for our newletter and promotion</p>
-							</legend>
-							<div class="subscribe-form__controls">
-								<label class="visually-hidden" for="email">email</label>
-								<input class="subscribe-form__input" name="email" type="email" placeholder="Enter Your Email" value="" />
-								<button class="subscribe-form__btn btn--pink" type="submit">Subscribe</button>
-							</div>
-						</form>
-					</div>
+					<form class="subscribe-form" action="">
+						<div class="subscribe-form__legend">
+							<h3 class="subscribe-form__legend-title">subscribe</h3>
+							<p class="subscribe-form__legend-desc">for our newletter and promotion</p>
+						</div>
+						<div class="subscribe-form__controls">
+							<label class="subscribe-form__controls-label visually-hidden" for="email">email</label>
+							<input class="subscribe-form__controls-input" id="email" type="email" name="email" placeholder="Enter Your Email" required />
+							<button class="subscribe-form__controls-btn" type="submit">Subscribe</button>
+						</div>
+					</form>
 				</div>
 			</section>
-			<section class="copyright-and-socials">
-				<div class="container copyright-and-socials__wrp">
-					<p class="copyright">© 2021 Brand All Rights Reserved.</p>
-					<ul class="socials__list">
-						<li class="socials__item">
-							<a class="socials__item-link" href="#">
-								<svg class="socials__item-svg">
-									<use xlink:href="#facebook"></use>
-								</svg>
-							</a>
-						</li>
-						<li class="socials__item">
-							<a class="socials__item-link" href="#">
-								<svg class="socials__item-svg">
-									<use xlink:href="#instagram"></use>
-								</svg>
-							</a>
-						</li>
-						<li class="socials__item">
-							<a class="socials__item-link" href="#">
-								<svg class="socials__item-svg">
-									<use xlink:href="#pinterest"></use>
-								</svg>
-							</a>
-						</li>
-						<li class="socials__item">
-							<a class="socials__item-link" href="#">
-								<svg class="socials__item-svg">
-									<use xlink:href="#twitter"></use>
-								</svg>
-							</a>
-						</li>
-					</ul>
-				</div>
+			<section class="container footer__wrp">
+				<h2 class="visually-hidden">copyright & socials</h2>
+				<p class="footer__copyright">© 2021 Brand All Rights Reserved.</p>
+				<ul class="socials">
+					<li class="socials__item">
+						<a class="socials__item-link" href="#">
+							<svg class="socials__item-svg">
+								<use xlink:href="#facebook"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="socials__item">
+						<a class="socials__item-link" href="#">
+							<svg class="socials__item-svg">
+								<use xlink:href="#instagram"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="socials__item">
+						<a class="socials__item-link" href="#">
+							<svg class="socials__item-svg">
+								<use xlink:href="#pinterest"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="socials__item">
+						<a class="socials__item-link" href="#">
+							<svg class="socials__item-svg">
+								<use xlink:href="#twitter"></use>
+							</svg>
+						</a>
+					</li>
+				</ul>
 			</section>
 		</footer>
+		<script src="./scripts/index.js"></script>
 	</body>
 </html>

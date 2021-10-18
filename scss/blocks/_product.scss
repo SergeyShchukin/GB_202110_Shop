@@ -1,0 +1,55 @@
+.product {
+	height: 581px;
+	width: 360px;
+	background-color: $very-dark-white;
+
+	&__image-box {
+		position: relative;
+		background-color: $gray-hover;
+		@include flex-center();
+	}
+
+	&__image {
+		z-index: 2;
+	}
+
+	&__image-box:focus-within &__image,
+	&__image-box:hover &__image {
+		z-index: 0;
+		opacity: 0.13;
+	}
+
+	&__btn {
+		position: absolute;
+		z-index: 1;
+		@include flex-center($justify-content: space-around);
+		@include btn($border-color: $white, $color: $white);
+		width: 138px;
+		height: 43px;
+
+		&::before {
+			content: url(../img/white-basket.svg);
+			width: 27px;
+			height: 25px;
+		}
+	}
+
+	&__info {
+		padding: 25px 28px 20px 17px;
+
+		&-title {
+			@include font($font-size: 13px, $line-height: 16px, $text-transform: true);
+		}
+
+		&-desc {
+			@include font($font-family: Lato-Light);
+			color: $very-gray;
+			margin: 13px auto 18px auto;
+		}
+
+		&-price {
+			@include font($font-size: 16px, $line-height: 19px);
+			color: $pink;
+		}
+	}
+}

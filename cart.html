@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Shop</title>
+		<title>Shop - cart</title>
 		<link rel="stylesheet" href="./fonts/fonts.css" />
 		<link rel="stylesheet" href="./css/style.css" />
 	</head>
@@ -197,157 +197,109 @@
 			</nav>
 		</header>
 		<main class="main">
-			<section class="brand" id="brand">
-				<img class="brand__img" src="./img/man.jpg" alt="man" width="800" height="764" />
-				<div class="brand__wrp">
-					<h1 class="brand__title">
-						the brand<span class="brand__subtitle">of luxerious&nbsp;<span class="brand__subtitle brand__subtitle--pink">fashion</span></span>
-					</h1>
+			<section class="page-header">
+				<div class="container">
+					<h1 class="page-header__title">shopping cart</h1>
 				</div>
 			</section>
-			<section class="container sales">
-				<h2 class="sales__heading visually-hidden">sales</h2>
-				<ul class="sales__list">
-					<li class="sales__item sales__item--women">
-						<a href="#" class="sales__item-link">
-							<p class="sales__item-text">30% off</p>
-							<h3 class="sales__item-title">for women</h3>
-						</a>
-					</li>
-					<li class="sales__item sales__item--men">
-						<a href="#" class="sales__item-link">
-							<p class="sales__item-text">hot deal</p>
-							<h3 class="sales__item-title">for men</h3>
-						</a>
-					</li>
-					<li class="sales__item sales__item--kids">
-						<a href="#" class="sales__item-link">
-							<p class="sales__item-text">new arrivals</p>
-							<h3 class="sales__item-title">for kids</h3>
-						</a>
-					</li>
-					<li class="sales__item sales__item--accesories">
-						<a href="#" class="sales__item-link">
-							<p class="sales__item-text">luxirous & trendy</p>
-							<h3 class="sales__item-title">accesories</h3>
-						</a>
-					</li>
-				</ul>
-			</section>
-			<section class="container products">
-				<h2 class="products__title">Fetured Items</h2>
-				<p class="products__title-desc">Shop for items based on what we featured in this week</p>
-				<ul class="products__list">
-					<li class="product">
-						<div class="product__image-box">
-							<img class="product__image" src="./img/product-1.jpg" alt="product-1" width="360" height="420" />
-							<button class="product__btn" type="button" id="product-1-btn">
-								<span class="product__btn-text">Add to Cart</span>
-							</button>
+			<div class="container flex-wrp">
+				<section class="cart-products">
+					<h2 class="visually-hidden">products in the cart</h2>
+					<ul class="cart-products__list">
+						<li class="cart-products__item cart-product">
+							<img class="cart-product__image" src="./img/product-3.jpg" alt="product-3" width="262" height="306" />
+							<div class="cart-product__desc">
+								<h3 class="cart-product__title">
+									mango people
+									<span class="cart-product__title-sub">t-shirt</span>
+								</h3>
+								<p class="cart-product__desc-key">Price:&nbsp;<span class="cart-product__desc-value cart-product__desc-value--price">$300</span></p>
+								<p class="cart-product__desc-key">Color:&nbsp;<span class="cart-product__desc-value">Red</span></p>
+								<p class="cart-product__desc-key">Size:&nbsp;<span class="cart-product__desc-value">Xl</span></p>
+								<div class="cart-product__desc-key">
+									<label for="quantity-product-3">Quantity:</label>
+									<input class="cart-product__desc-value cart-product__desc-value--input" type="number" min="0" id="quantity-product-3" />
+								</div>
+								<button class="cart-product__btn" type="button" id="remove-product-3-btn">
+									<svg class="cart-product__btn-svg">
+										<use xlink:href="#close"></use>
+									</svg>
+								</button>
+							</div>
+						</li>
+						<li class="cart-products__item cart-product">
+							<img class="cart-product__image" src="./img/product-7.jpg" alt="product-7" width="262" height="306" />
+							<div class="cart-product__desc">
+								<h3 class="cart-product__title">
+									mango people
+									<span class="cart-product__title-sub">t-shirt</span>
+								</h3>
+								<p class="cart-product__desc-key">Price:&nbsp;<span class="cart-product__desc-value cart-product__desc-value--price">$300</span></p>
+								<p class="cart-product__desc-key">Color:&nbsp;<span class="cart-product__desc-value">Red</span></p>
+								<p class="cart-product__desc-key">Size:&nbsp;<span class="cart-product__desc-value">Xl</span></p>
+								<div class="cart-product__desc-key">
+									<label for="quantity-product-7">Quantity:</label>
+									<input class="cart-product__desc-value cart-product__desc-value--input" type="number" min="0" id="quantity-product-7" />
+								</div>
+								<button class="cart-product__btn" type="button" id="remove-product-7-btn">
+									<svg class="cart-product__btn-svg">
+										<use xlink:href="#close"></use>
+									</svg>
+								</button>
+							</div>
+						</li>
+					</ul>
+					<div class="cart-products__controls">
+						<button class="cart-products__btn" type="button">clear shopping cart</button>
+						<button class="cart-products__btn" type="button">continue shopping</button>
+					</div>
+				</section>
+				<section class="purchase-form">
+					<h2 class="visually-hidden">purchase form</h2>
+					<form class="shipping-form" action="">
+						<fieldset>
+							<legend class="shipping-form__title">shipping adress</legend>
+							<label class="visually-hidden" for="city">city</label>
+							<input class="shipping-form__inp" type="text" name="city" placeholder="City" id="city" value="Bangladesh" />
+							<label class="visually-hidden" for="state">state</label>
+							<input class="shipping-form__inp" type="text" name="state" placeholder="State" id="state" />
+							<label class="visually-hidden" for="postcode">postcode / zip</label>
+							<input class="shipping-form__inp" type="text" name="postcode" placeholder="Postcode / Zip" id="postcode" />
+						</fieldset>
+						<button class="shipping-form__btn" type="submit">get a quote</button>
+					</form>
+					<form class="purchase-form__checkout" action="">
+						<!-- сделал эту часть как форма, т.к. кнопка отправки суммы -->
+						<label class="purchase-form__checkout-total purchase-form__checkout-total--sub"
+							>sub total
+							<input
+								class="purchase-form__checkout-total-value purchase-form__checkout-total-value--sub"
+								type="text"
+								name="sub-total"
+								id="sub-total"
+								value="$900"
+								readonly
+								disabled
+							/>
+						</label>
+						<label class="purchase-form__checkout-total purchase-form__checkout-total--grand"
+							>grand total
+							<input
+								class="purchase-form__checkout-total-value purchase-form__checkout-total-value--grand"
+								type="text"
+								name="grand-total"
+								id="grand-total"
+								value="$900"
+								readonly
+								disabled
+							/>
+						</label>
+						<div class="purchase-form__checkout-wrp">
+							<button class="purchase-form__checkout-btn" type="submit">proceed to checkout</button>
 						</div>
-						<div class="product__info">
-							<h3 class="product__info-title">ellery x m'o capsule</h3>
-							<p class="product__info-desc">
-								Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.
-							</p>
-							<p class="product__info-price">$52.00</p>
-						</div>
-					</li>
-					<li class="product">
-						<div class="product__image-box">
-							<img class="product__image" src="./img/product-2.jpg" alt="product-2" width="360" height="420" />
-							<button class="product__btn" type="button" id="product-2-btn">
-								<span class="product__btn-text">Add to Cart</span>
-							</button>
-						</div>
-						<div class="product__info">
-							<h3 class="product__info-title">ellery x m'o capsule</h3>
-							<p class="product__info-desc">
-								Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.
-							</p>
-							<p class="product__info-price">$52.00</p>
-						</div>
-					</li>
-					<li class="product">
-						<div class="product__image-box">
-							<img class="product__image" src="./img/product-3.jpg" alt="product-3" width="360" height="420" />
-							<button class="product__btn" type="button" id="product-3-btn">
-								<span class="product__btn-text">Add to Cart</span>
-							</button>
-						</div>
-						<div class="product__info">
-							<h3 class="product__info-title">ellery x m'o capsule</h3>
-							<p class="product__info-desc">
-								Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.
-							</p>
-							<p class="product__info-price">$52.00</p>
-						</div>
-					</li>
-					<li class="product">
-						<div class="product__image-box">
-							<img class="product__image" src="./img/product-4.jpg" alt="product-4" width="360" height="420" />
-							<button class="product__btn" type="button" id="product-4-btn">
-								<span class="product__btn-text">Add to Cart</span>
-							</button>
-						</div>
-						<div class="product__info">
-							<h3 class="product__info-title">ellery x m'o capsule</h3>
-							<p class="product__info-desc">
-								Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.
-							</p>
-							<p class="product__info-price">$52.00</p>
-						</div>
-					</li>
-					<li class="product">
-						<div class="product__image-box">
-							<img class="product__image" src="./img/product-5.jpg" alt="product-5" width="360" height="420" />
-							<button class="product__btn" type="button" id="product-5-btn">
-								<span class="product__btn-text">Add to Cart</span>
-							</button>
-						</div>
-						<div class="product__info">
-							<h3 class="product__info-title">ellery x m'o capsule</h3>
-							<p class="product__info-desc">
-								Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.
-							</p>
-							<p class="product__info-price">$52.00</p>
-						</div>
-					</li>
-					<li class="product">
-						<div class="product__image-box">
-							<img class="product__image" src="./img/product-6.jpg" alt="product-6" width="360" height="420" />
-							<button class="product__btn" type="button" id="product-6-btn">
-								<span class="product__btn-text">Add to Cart</span>
-							</button>
-						</div>
-						<div class="product__info">
-							<h3 class="product__info-title">ellery x m'o capsule</h3>
-							<p class="product__info-desc">
-								Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.
-							</p>
-							<p class="product__info-price">$52.00</p>
-						</div>
-					</li>
-				</ul>
-				<button class="products__btn" type="button">Browse All Product</button>
-			</section>
-			<section class="offers">
-				<h2 class="visually-hidden">offers</h2>
-				<ul class="container offers__list">
-					<li class="offers__item offers__item--truck">
-						<h3 class="offers__item-title">Free Delivery</h3>
-						<p class="offers__item-desc">Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
-					</li>
-					<li class="offers__item offers__item--percent">
-						<h3 class="offers__item-title">Sales & discounts</h3>
-						<p class="offers__item-desc">Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
-					</li>
-					<li class="offers__item offers__item--crown">
-						<h3 class="offers__item-title">Quality assurance</h3>
-						<p class="offers__item-desc">Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
-					</li>
-				</ul>
-			</section>
+					</form>
+				</section>
+			</div>
 		</main>
 		<footer class="footer">
 			<section class="subscribe">
