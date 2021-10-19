@@ -1,0 +1,60 @@
+.cart-product {
+	display: flex;
+	box-shadow: 17px 19px 24px 0 #00000021;
+
+	&__title {
+		@include font($font-size: 24px, $line-height: 29px, $text-transform: true);
+		margin-bottom: 42px;
+
+		&-sub {
+			display: block;
+		}
+	}
+
+	&__desc {
+		flex-grow: 1;
+		position: relative;
+		padding: 22px 31px;
+
+		&-key {
+			margin-bottom: 6px;
+			@include font($font-size: 22px, $line-height: 26px);
+			color: $very-gray-cart;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		&-value {
+			color: $gray-cart;
+
+			&--price {
+				color: $pink;
+			}
+
+			&--input {
+				margin-left: 25px;
+				width: 43px;
+				height: 24px;
+				text-align: center;
+				@include font($font-size: 22px, $line-height: 26px);
+				@include text-input($bkg-color: transparent, $border: 1px solid $light-gray-cart-input);
+			}
+		}
+	}
+
+	&__btn {
+		position: absolute;
+		right: 22px;
+		top: 28px;
+
+		&-svg {
+			height: 17px;
+			width: 17px;
+			fill: $very-gray-cart;
+		}
+
+		@include svg-effects($child: '-svg');
+	}
+}

@@ -1,0 +1,60 @@
+.nav-menu {
+	position: absolute;
+	z-index: 2;
+	right: 0;
+	width: 232px;
+	height: 764px;
+	background-color: $white;
+	box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+	padding: 37px 34px;
+	box-sizing: border-box;
+
+	&__btn {
+		margin: 16px;
+		position: absolute;
+		right: 0;
+		top: 0;
+		border: none;
+		background: none;
+
+		&-svg {
+			fill: $gray;
+			width: 13px;
+			height: 13px;
+		}
+
+		@include svg-effects($child: '-svg');
+	}
+
+	&__title {
+		@include font($font-family: Lato-Bold, $text-transform: true);
+		margin-bottom: 24px;
+	}
+
+	&__item {
+		&-title {
+			text-transform: uppercase;
+			color: $pink;
+			margin: 20px auto 12px auto;
+		}
+
+		&-sub-item {
+			color: $gray;
+			padding: 6px 20px;
+		}
+	}
+
+	&__link {
+		&:hover {
+			background-color: $light-pink;
+		}
+
+		&:active {
+			background-color: $pink;
+		}
+
+		&:focus-within {
+			outline: 2px solid $pink-border;
+		}
+	}
+}

@@ -1,0 +1,13 @@
+.subscribe {
+	position: relative;
+	background: url('../img/bg-beach.jpg') center;
+
+	&::after {
+		@include pseudo-dimmer($light-gray-bg, 0.7);
+	}
+
+	&__wrp {
+		height: 448px;
+		@include flex-center($justify-content: space-between);
+	}
+}

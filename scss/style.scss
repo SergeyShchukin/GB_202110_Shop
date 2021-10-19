@@ -1,0 +1,39 @@
+@import './reset';
+@import './varibles';
+@import './mixins';
+@import './general';
+
+// header-start
+@import './blocks/header';
+@import './blocks/nav-menu';
+// header-end
+
+// index-start
+@import './blocks/brand';
+@import './blocks/sales';
+@import './blocks/products';
+@import './blocks/product';
+@import './blocks/offers';
+// index-end
+
+// registration-start
+@import './blocks/page-header';
+@import './blocks/registration';
+@import './blocks/gender-box';
+@import './blocks/loyalty';
+// registration-end
+
+// cart-start
+@import './blocks/cart-products';
+@import './blocks/cart-product';
+@import './blocks/purchase-form';
+@import './blocks/shipping-form';
+// cart-end
+
+// footer-start
+@import './blocks/subscribe';
+@import './blocks/subscribe-quote';
+@import './blocks/subscribe-form';
+@import './blocks/footer';
+@import './blocks/socials';
+// footer-end

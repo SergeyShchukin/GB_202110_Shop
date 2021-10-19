@@ -1,0 +1,16 @@
+.socials {
+	display: flex;
+
+	&__item {
+		margin-left: 7px;
+
+		&-svg {
+			width: 32px;
+			height: 32px;
+		}
+
+		&-link {
+			@include img-effects();
+		}
+	}
+}

@@ -1,0 +1,18 @@
+.gender-box {
+	display: flex;
+	align-items: center;
+	height: 81px;
+
+	&__input {
+		@include text-input($border: 1px solid $light-gray-inp-border);
+		height: 17px;
+		width: 17px;
+		color: $dark-black;
+		margin-right: 10px;
+	}
+	&__label {
+		@include font($font-family: Lato-Light, $font-size: 13px, $line-height: 16px);
+		color: $dark-black;
+		margin-right: 20px;
+	}
+}

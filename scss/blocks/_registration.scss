@@ -1,0 +1,44 @@
+.registration {
+	height: 611px;
+	min-width: 360px;
+	margin-top: 64px;
+	margin-right: 64px;
+
+	&__wrp {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__form-title {
+		@include font($font-family: Lato-Light, $font-size: 16px, $line-height: 19px);
+		color: $black;
+	}
+
+	&__form-input {
+		@include text-input($border: 1px solid $light-gray-inp-border);
+		padding-left: 17px;
+		margin-top: 20px;
+		height: 45px;
+	}
+
+	&__form-label {
+		@include font($font-family: Lato-Light, $font-size: 13px, $line-height: 16px);
+		color: $light-gray-inp-text;
+		margin-top: 15px;
+	}
+
+	&__form-btn {
+		@include btn($transparent: false);
+		height: 50px;
+		width: 167px;
+		margin-top: 39px;
+		@include font($text-transform: true);
+
+		&::after {
+			content: url(../img/arrow.svg);
+			width: 17px;
+			height: 10px;
+			margin-left: 20px;
+		}
+	}
+}

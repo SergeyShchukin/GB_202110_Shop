@@ -1,0 +1,67 @@
+.sales {
+	margin: 63px auto;
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	&__item {
+		width: 360px;
+		height: 260px;
+		position: relative;
+
+		&::after {
+			@include pseudo-dimmer($reddish-black, 0.7);
+		}
+
+		&:hover {
+			opacity: 0.5;
+		}
+
+		&--women {
+			background-image: url('../img/bg-women.jpg');
+		}
+
+		&--men {
+			background-image: url('../img/bg-man.jpg');
+		}
+
+		&--kids {
+			background-image: url('../img/bg-kid.jpg');
+		}
+
+		&--accesories {
+			width: 100%;
+			height: 180px;
+			margin: 30px 0 0 0;
+			background-image: url('../img/bg-accesories.jpg');
+		}
+
+		&-link {
+			width: 100%;
+			height: 100%;
+			position: relative;
+			@include flex-center();
+			flex-direction: column;
+			z-index: 2;
+
+			&:focus {
+				outline: 2px solid $pink-border;
+			}
+		}
+
+		&-text {
+			@include font($font-family: Lato-Light, $font-size: 16px, $line-height: 19px, $text-transform: true);
+			text-align: center;
+			color: $white;
+		}
+
+		&-title {
+			@include font($font-family: Lato-Bold, $font-size: 24px, $line-height: 29px, $text-transform: true);
+			text-align: center;
+			color: $pink;
+		}
+	}
+}

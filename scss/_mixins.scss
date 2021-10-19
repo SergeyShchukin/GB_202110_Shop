@@ -1,0 +1,106 @@
+@mixin font($font-family: Lato, $font-size: 14px, $line-height: 17px, $text-transform: false) {
+	font-family: $font-family;
+	font-size: $font-size;
+	line-height: $line-height;
+
+	@if $text-transform {
+		text-transform: uppercase;
+	}
+}
+
+@mixin flex-center($justify-content: center) {
+	display: flex;
+	align-items: center;
+	justify-content: $justify-content;
+}
+
+@mixin pseudo-dimmer($bkg-color, $opacity) {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+	background-color: $bkg-color;
+	opacity: $opacity;
+}
+
+@mixin text-input($bkg-color: $white, $border: none, $placeholder-color: $light-gray-inp-text) {
+	background-color: $bkg-color;
+	border: $border;
+
+	&:hover {
+		outline: 2px solid $gray;
+	}
+
+	&:focus {
+		outline: 2px solid $pink-border;
+	}
+
+	&::placeholder {
+		color: $placeholder-color;
+	}
+}
+
+@mixin btn($transparent: true, $border-color: $light-gray-inp-border, $color: $dark-black) {
+	@if $transparent {
+		border: 1px solid $border-color;
+		color: $color;
+		background-color: transparent;
+
+		&:hover {
+			background-color: $pink;
+			color: $white;
+			outline: 2px solid $gray;
+		}
+
+		&:focus {
+			outline: 2px solid $pink-border;
+		}
+	} @else {
+		border: 1px solid $pink-border;
+		background-color: $pink;
+		color: $white;
+
+		&:hover {
+			background-color: $light-gray;
+		}
+
+		&:focus {
+			outline: 2px solid $gray;
+		}
+	}
+
+	&:active {
+		outline: 4px solid $pink-border;
+	}
+}
+
+@mixin img-effects() {
+	&:hover {
+		opacity: 0.13;
+	}
+
+	&:active {
+		opacity: 0.5;
+	}
+
+	&:focus {
+		outline: 2px solid $pink-border;
+	}
+}
+
+@mixin svg-effects($parent: '', $child: '') {
+	&#{$parent}:hover &#{$child} {
+		fill: $pink;
+	}
+
+	&#{$parent}:active &#{$child} {
+		fill: $gray;
+	}
+
+	&#{$parent}:focus {
+		outline: 2px solid $pink-border;
+	}
+}

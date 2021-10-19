@@ -1,0 +1,83 @@
+.header {
+	background-color: $black;
+	position: relative;
+
+	&__wrp {
+		@include flex-center($justify-content: space-between);
+		height: 75px;
+
+		&-controls {
+			// считается ли это как уровень вложенности 3?
+			@include flex-center();
+		}
+	}
+
+	&__logo {
+		margin: 0 41px 0 0;
+		@include img-effects();
+	}
+
+	&__search-form {
+		position: relative;
+		height: 30px;
+		width: 400px;
+
+		&-input {
+			height: 100%;
+			width: 100%;
+			margin-left: 10px;
+			@include text-input($border: 1px solid $pink-border);
+		}
+	}
+
+	&__link {
+		margin: 0 0 0 31px;
+	}
+
+	&__svg {
+		fill: $light-gray-svg;
+
+		&--search {
+			width: 27px;
+			height: 28px;
+		}
+
+		&--burger {
+			width: 32px;
+			height: 23px;
+		}
+
+		&--person {
+			width: 29px;
+			height: 29px;
+		}
+
+		&--basket {
+			width: 33px;
+			height: 29px;
+		}
+	}
+
+	@include svg-effects(__btn, __svg);
+	@include svg-effects(__link, __svg);
+
+	&__basket {
+		position: relative;
+		display: inline-block;
+		height: 30px;
+
+		&-count {
+			position: absolute;
+			top: -8px;
+			right: -9px;
+			width: 19px;
+			height: 19px;
+			border-radius: 50%;
+			background-color: $pink;
+			color: $white;
+
+			@include font($font-family: Lato-Light, $font-size: 12px, $line-height: 14px);
+			@include flex-center();
+		}
+	}
+}

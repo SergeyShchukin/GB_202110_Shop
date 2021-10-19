@@ -1,0 +1,29 @@
+.loyalty {
+	margin-left: 64px;
+	margin-top: 64px;
+	@include font($font-family: Lato-Light, $font-size: 24px, $line-height: 29px);
+	color: $dark-black;
+
+	&__title {
+		text-transform: uppercase;
+	}
+
+	&__desc {
+		margin: 22px auto;
+	}
+
+	&__item {
+		margin-bottom: 16px;
+
+		&::before {
+			content: url(../img/check-mark.svg);
+			width: 20px;
+			height: 16px;
+			margin-right: 23px;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

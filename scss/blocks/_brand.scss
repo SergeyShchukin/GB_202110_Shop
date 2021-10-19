@@ -1,0 +1,32 @@
+.brand {
+	display: flex;
+	position: relative;
+
+	&__wrp {
+		background-color: $light-pink;
+		flex-grow: 1;
+		padding: 0 0 0 76px;
+		@include flex-center($justify-content: unset);
+
+		&::before {
+			content: '';
+			width: 12px;
+			height: 92px;
+			background-color: $pink;
+			margin: 0 16px 0 -12px;
+		}
+	}
+
+	&__title {
+		@include font($font-family: Lato-Black, $font-size: 48px, $line-height: 58px, $text-transform: true);
+	}
+
+	&__subtitle {
+		display: flex;
+		@include font($font-family: Lato-Black, $font-size: 32px, $line-height: 38px, $text-transform: true);
+
+		&--pink {
+			color: $pink;
+		}
+	}
+}

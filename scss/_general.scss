@@ -1,0 +1,38 @@
+.visually-hidden {
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	margin: -1px;
+}
+
+// для динамического скрытия и отображения
+.display-hide {
+	display: none;
+}
+.display-show {
+	display: block;
+}
+
+.page {
+	@include font();
+}
+
+.container {
+	width: 1140px;
+	margin: 0 auto;
+}
+
+.flex-wrp {
+	display: flex;
+}
+
+// для динамического затемнения
+.opacity-container::after {
+	@include pseudo-dimmer($dark-black, 0.5);
+}
