@@ -1,11 +1,14 @@
 .page-header {
 	background-color: $page-header-white;
 	height: 148px;
-
 	@include flex-center();
 
 	&__title {
 		@include font($font-size: 24px, $line-height: 29px, $text-transform: true);
 		color: $pink;
+
+		@include mobile {
+			text-align: center;
+		}
 	}
 }

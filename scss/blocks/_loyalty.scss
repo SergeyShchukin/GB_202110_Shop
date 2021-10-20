@@ -1,8 +1,21 @@
 .loyalty {
-	margin-left: 64px;
+	margin-left: 128px;
 	margin-top: 64px;
 	@include font($font-family: Lato-Light, $font-size: 24px, $line-height: 29px);
 	color: $dark-black;
+
+	@include tablet {
+		margin-top: 40px;
+		margin-left: 22px;
+		@include font($font-family: Lato-Light, $font-size: 16px, $line-height: 19px);
+	}
+
+	@include mobile {
+		margin-top: 0;
+		margin-left: 0;
+		margin-bottom: 100px;
+		@include font($font-family: Lato-Light, $font-size: 16px, $line-height: 19px);
+	}
 
 	&__title {
 		text-transform: uppercase;
@@ -14,6 +27,7 @@
 
 	&__item {
 		margin-bottom: 16px;
+		display: flex;
 
 		&::before {
 			content: url(../img/check-mark.svg);

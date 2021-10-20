@@ -1,10 +1,25 @@
 .cart-products {
 	min-width: 652px;
 	margin-top: 96px;
-	margin-right: 64px;
+
+	@include tablet {
+		margin-top: 59px;
+		min-width: unset;
+		width: 100%;
+	}
+
+	@include mobile {
+		margin-top: 39px;
+		min-width: unset;
+		width: 100%;
+	}
 
 	&__item {
 		margin-bottom: 40px;
+
+		@include mobile {
+			margin-bottom: 32px;
+		}
 
 		&:last-child {
 			margin-bottom: 0;
@@ -16,6 +31,18 @@
 		justify-content: space-between;
 		margin-top: 73px;
 		margin-bottom: 128px;
+
+		@include tablet {
+			margin-top: 62px;
+			margin-bottom: 64px;
+			justify-content: space-evenly;
+		}
+
+		@include mobile {
+			margin-top: 30px;
+			margin-bottom: 48px;
+			justify-content: space-between;
+		}
 	}
 
 	&__btn {
@@ -23,5 +50,10 @@
 		@include font($font-family: Lato-Light, $text-transform: true);
 		height: 49px;
 		width: 229px;
+
+		@include mobile {
+			@include font($font-family: Lato, $font-size: 12px, $line-height: 14px);
+			width: 174px;
+		}
 	}
 }

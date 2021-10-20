@@ -2,11 +2,30 @@
 	display: flex;
 	position: relative;
 
+	&__img {
+		max-width: 800px;
+		width: 50%;
+		height: auto;
+
+		@include mobile {
+			display: none;
+		}
+	}
+
 	&__wrp {
 		background-color: $light-pink;
 		flex-grow: 1;
 		padding: 0 0 0 76px;
 		@include flex-center($justify-content: unset);
+
+		@include tablet {
+			padding: 0 0 0 52px;
+		}
+
+		@include mobile {
+			padding: 0 0 0 68px;
+			height: 363px;
+		}
 
 		&::before {
 			content: '';
@@ -14,16 +33,36 @@
 			height: 92px;
 			background-color: $pink;
 			margin: 0 16px 0 -12px;
+
+			@include mobile {
+				height: 61px;
+			}
 		}
 	}
 
 	&__title {
 		@include font($font-family: Lato-Black, $font-size: 48px, $line-height: 58px, $text-transform: true);
+
+		@include tablet {
+			@include font($font-family: Lato-Black, $font-size: 44px, $line-height: 53px);
+		}
+
+		@include mobile {
+			@include font($font-family: Lato-Black, $font-size: 38px, $line-height: 46px);
+		}
 	}
 
 	&__subtitle {
 		display: flex;
 		@include font($font-family: Lato-Black, $font-size: 32px, $line-height: 38px, $text-transform: true);
+
+		@include tablet {
+			@include font($font-family: Lato-Black, $font-size: 24px, $line-height: 29px);
+		}
+
+		@include mobile {
+			@include font($font-family: Lato-Black, $font-size: 20px, $line-height: 24px);
+		}
 
 		&--pink {
 			color: $pink;

@@ -10,6 +10,7 @@
 		color: $dark-black;
 		margin-right: 10px;
 	}
+
 	&__label {
 		@include font($font-family: Lato-Light, $font-size: 13px, $line-height: 16px);
 		color: $dark-black;

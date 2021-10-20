@@ -1,8 +1,17 @@
 .registration {
-	height: 611px;
 	min-width: 360px;
 	margin-top: 64px;
-	margin-right: 64px;
+	margin-bottom: 96px;
+
+	@include tablet {
+		margin-top: 40px;
+	}
+
+	@include mobile {
+		margin: 40px 8px;
+		min-width: unset;
+		width: 100%;
+	}
 
 	&__wrp {
 		display: flex;
@@ -39,6 +48,10 @@
 			width: 17px;
 			height: 10px;
 			margin-left: 20px;
+		}
+
+		&:hover::after {
+			content: url(../img/pink-arrow.svg);
 		}
 	}
 }
