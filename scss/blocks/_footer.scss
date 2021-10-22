@@ -4,11 +4,21 @@
 	&__wrp {
 		height: 79px;
 		@include flex-center($justify-content: space-between);
+
+		@include mobile {
+			height: 143px;
+			flex-direction: column-reverse;
+			justify-content: flex-start;
+		}
 	}
 
 	&__copyright {
-		// если добавить имена параметров, то первый $font-family можно не указывать
 		@include font($font-size: 16px, $line-height: 19px);
 		color: $dark-white;
+
+		@include mobile {
+			margin-top: 40px;
+			margin-bottom: 9px;
+		}
 	}
 }

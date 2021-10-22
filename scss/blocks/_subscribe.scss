@@ -1,6 +1,15 @@
 .subscribe {
 	position: relative;
-	background: url('../img/bg-beach.jpg') center;
+	background: url('../img/bg-beach.jpg');
+	background-size: 100% auto;
+
+	@include tablet {
+		background-size: auto 693px;
+	}
+
+	@include mobile {
+		background-size: auto 550px;
+	}
 
 	&::after {
 		@include pseudo-dimmer($light-gray-bg, 0.7);
@@ -9,5 +18,17 @@
 	&__wrp {
 		height: 448px;
 		@include flex-center($justify-content: space-between);
+
+		@include tablet {
+			height: 693px;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		@include mobile {
+			height: 550px;
+			flex-direction: column;
+			justify-content: center;
+		}
 	}
 }

@@ -5,9 +5,17 @@
 	&__wrp {
 		@include flex-center($justify-content: space-between);
 		height: 75px;
+		box-sizing: border-box;
+
+		@include tablet {
+			padding: 0 32px;
+		}
+
+		@include mobile {
+			padding: 0 16px;
+		}
 
 		&-controls {
-			// считается ли это как уровень вложенности 3?
 			@include flex-center();
 		}
 	}
@@ -22,6 +30,10 @@
 		height: 30px;
 		width: 400px;
 
+		@include mobile {
+			width: 140px;
+		}
+
 		&-input {
 			height: 100%;
 			width: 100%;
@@ -32,6 +44,10 @@
 
 	&__link {
 		margin: 0 0 0 31px;
+
+		@include mobile {
+			display: none;
+		}
 	}
 
 	&__svg {

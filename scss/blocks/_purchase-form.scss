@@ -1,7 +1,23 @@
 .purchase-form {
-	margin-left: 64px;
+	margin-left: 128px;
 	margin-top: 113px;
 	width: 360px;
+
+	@include tablet {
+		margin-left: 0;
+		margin-top: 0;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	@include mobile {
+		margin-left: 0;
+		margin-top: 0;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+	}
 
 	&__checkout {
 		box-sizing: border-box;
@@ -9,6 +25,17 @@
 		height: 214px;
 		padding-top: 39px;
 		background-color: $light-gray-cart;
+
+		@include tablet {
+			width: 49%;
+			margin-top: 38px;
+		}
+
+		@include mobile {
+			width: 100%;
+			margin-top: 0;
+			margin-bottom: 96px;
+		}
 
 		&-wrp {
 			width: 100%;
