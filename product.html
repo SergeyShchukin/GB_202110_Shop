@@ -4,7 +4,9 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Shop - registration</title>
+		<title>Shop - product</title>
+		<link rel="stylesheet" href="./css/all.css" />
+		<link rel="stylesheet" href="./css/bootstrap.css" />
 		<link rel="stylesheet" href="./css/style.css" />
 	</head>
 	<body class="page">
@@ -197,56 +199,172 @@
 		</header>
 		<main class="main">
 			<section class="page-header">
-				<div class="my-container">
-					<h1 class="page-header__title">registration</h1>
+				<div class="my-container page-header__wrp">
+					<h1 class="page-header__title">new arrivals</h1>
+					<nav class="page-header__nav" aria-label="breadcrumb">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="#">home</a></li>
+							<li class="breadcrumb-item"><a href="#">men</a></li>
+							<li class="breadcrumb-item active" aria-current="page">new arrivals</li>
+						</ol>
+					</nav>
 				</div>
 			</section>
-			<div class="my-container flex-wrp">
-				<section class="registration">
-					<h2 class="visually-hidden">registration form</h2>
-					<form class="registration__form" action="">
-						<fieldset class="registration__wrp">
-							<legend class="registration__form-title">Your Name</legend>
-							<label class="visually-hidden" for="first-name">First Name</label>
-							<input class="registration__form-input" type="text" name="first-name" placeholder="First Name" id="first-name" />
-							<label class="visually-hidden" for="last-name">Last Name</label>
-							<input class="registration__form-input" type="text" name="last-name" placeholder="Last Name" id="last-name" />
-						</fieldset>
-						<fieldset class="gender-box">
-							<legend class="visually-hidden gender-box__title">gender</legend>
-							<input class="gender-box__input" type="radio" name="gender" id="male" value="male" />
-							<label class="gender-box__label" for="male">Male</label>
-							<input class="gender-box__input" type="radio" name="gender" id="female" value="female" />
-							<label class="gender-box__label" for="female">Female</label>
-							<input class="gender-box__input" type="radio" name="gender" id="other" value="other" />
-							<label class="gender-box__label" for="other">Other</label>
-						</fieldset>
-						<fieldset class="registration__wrp">
-							<legend class="registration__form-title">Login details</legend>
-							<label class="visually-hidden" for="reg-email">email</label>
-							<input class="registration__form-input" type="email" name="email" placeholder="Email" id="reg-email" required />
-							<input class="registration__form-input" type="password" name="password" placeholder="Password" id="password" required />
-							<label class="registration__form-label" for="password"
-								>Please use 8 or more characters, with at least 1 number and a mixture of uppercase and lowercase letters
-							</label>
-						</fieldset>
-						<button class="registration__form-btn" type="submit"><span>join now</span></button>
-					</form>
-				</section>
-				<section class="loyalty">
-					<h2 class="loyalty__title">loyalty has its perks</h2>
-					<p class="loyalty__desc">
-						Get in on the loyalty program where you can earn points and unlock serious perks. Starting with these as soon as you join:
-					</p>
-					<ul class="loyalty__list">
-						<li class="loyalty__item">15% off welcome offer</li>
-						<li class="loyalty__item">Free shipping, returns and exchanges on all orders</li>
-						<li class="loyalty__item">$10 off a purchase on your birthday</li>
-						<li class="loyalty__item">Early access to products</li>
-						<li class="loyalty__item">Exclusive offers & rewards</li>
-					</ul>
-				</section>
-			</div>
+			<section class="product-slides">
+				<h2 class="product-slides__title visually-hidden">product slides</h2>
+				<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<div class="d-block w-100">
+								<div class="product-slides__slide">
+									<img class="product-slides__slide-img" src="./img/product-8.jpg" alt="product-8" width="597" height="724" />
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<div class="d-block w-100">
+								<div class="product-slides__slide">
+									<img class="product-slides__slide-img" src="./img/product-2.jpg" alt="product-2" width="597" height="724" />
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<div class="d-block w-100">
+								<div class="product-slides__slide">
+									<img class="product-slides__slide-img" src="./img/product-3.jpg" alt="product-3" width="597" height="724" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+						<span class="product-slides__control">
+							<i class="fas fa-chevron-left"></i>
+						</span>
+						<span class="visually-hidden">Предыдущий</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+						<span class="product-slides__control">
+							<i class="fas fa-chevron-right"></i>
+						</span>
+						<span class="visually-hidden">Следующий</span>
+					</button>
+				</div>
+			</section>
+			<section class="product-description">
+				<p class="product-description__collection">women collection</p>
+				<h2 class="product-description__title">moschino cheap and chic</h2>
+				<p class="product-description__desc">
+					Compellingly actualize fully researched processes before proactive outsourcing. Progressively syndicate collaborative architectures before
+					cutting-edge services. Completely visualize parallel core competencies rather than exceptional portals.
+				</p>
+				<p class="product-description__price">$561</p>
+				<div class="product-description__controls">
+					<div class="product-description__controls-drpdwn-wrp">
+						<div class="dropdown">
+							<button
+								class="btn btn-transparent dropdown-toggle"
+								type="button"
+								id="dropdownColorButton"
+								data-bs-toggle="dropdown"
+								aria-expanded="false"
+							>
+								choose color
+							</button>
+							<ul class="dropdown-menu dropdown-menu-transparent" aria-labelledby="dropdownColorButton">
+								<li><a class="dropdown-item active" href="#">red</a></li>
+								<li><a class="dropdown-item" href="#">white</a></li>
+								<li><a class="dropdown-item" href="#">gray</a></li>
+							</ul>
+						</div>
+						<div class="dropdown">
+							<button
+								class="btn btn-transparent dropdown-toggle"
+								type="button"
+								id="dropdownSizeButton"
+								data-bs-toggle="dropdown"
+								aria-expanded="false"
+							>
+								choose size
+							</button>
+							<ul class="dropdown-menu dropdown-menu-transparent" aria-labelledby="dropdownSizeButton">
+								<li><a class="dropdown-item active" href="#">XL</a></li>
+								<li><a class="dropdown-item" href="#">L</a></li>
+								<li><a class="dropdown-item" href="#">M</a></li>
+							</ul>
+						</div>
+						<div class="dropdown">
+							<button
+								class="btn btn-transparent dropdown-toggle"
+								type="button"
+								id="dropdownQuantityButton"
+								data-bs-toggle="dropdown"
+								aria-expanded="false"
+							>
+								quantity
+							</button>
+							<ul class="dropdown-menu dropdown-menu-transparent" aria-labelledby="dropdownQuantityButton">
+								<li><a class="dropdown-item active" href="#">1</a></li>
+								<li><a class="dropdown-item" href="#">2</a></li>
+								<li><a class="dropdown-item" href="#">3</a></li>
+							</ul>
+						</div>
+					</div>
+					<button class="product-description__controls-btn" type="button" id="product-btn">
+						<span class="product-description__controls-btn-icon"><i class="fas fa-shopping-cart"></i></span>
+						<span class="product-description__controls-btn-text">Add to Cart</span>
+					</button>
+				</div>
+			</section>
+			<section class="other-products my-container">
+				<h2 class="other-products__title visually-hidden">other products</h2>
+				<ul class="other-products__list">
+					<li class="other-products__item product">
+						<div class="product__image-box">
+							<img class="product__image" src="./img/product-3.jpg" alt="product-3" width="360" height="420" />
+							<button class="product__btn" type="button" id="product-3-btn">
+								<span class="product__btn-text">Add to Cart</span>
+							</button>
+						</div>
+						<div class="product__info">
+							<h3 class="product__info-title">ellery x m'o capsule</h3>
+							<p class="product__info-desc">
+								Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.
+							</p>
+							<p class="product__info-price">$52.00</p>
+						</div>
+					</li>
+					<li class="other-products__item product">
+						<div class="product__image-box">
+							<img class="product__image" src="./img/product-4.jpg" alt="product-4" width="360" height="420" />
+							<button class="product__btn" type="button" id="product-4-btn">
+								<span class="product__btn-text">Add to Cart</span>
+							</button>
+						</div>
+						<div class="product__info">
+							<h3 class="product__info-title">ellery x m'o capsule</h3>
+							<p class="product__info-desc">
+								Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.
+							</p>
+							<p class="product__info-price">$52.00</p>
+						</div>
+					</li>
+					<li class="other-products__item other-products__item--last product">
+						<div class="product__image-box">
+							<img class="product__image" src="./img/product-6.jpg" alt="product-6" width="360" height="420" />
+							<button class="product__btn" type="button" id="product-6-btn">
+								<span class="product__btn-text">Add to Cart</span>
+							</button>
+						</div>
+						<div class="product__info">
+							<h3 class="product__info-title">ellery x m'o capsule</h3>
+							<p class="product__info-desc">
+								Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.
+							</p>
+							<p class="product__info-price">$52.00</p>
+						</div>
+					</li>
+				</ul>
+			</section>
 		</main>
 		<footer class="footer">
 			<section class="subscribe">
@@ -308,6 +426,7 @@
 				</ul>
 			</section>
 		</footer>
+		<script src="./scripts/bootstrap.bundle.js"></script>
 		<script src="./scripts/index.js"></script>
 	</body>
 </html>

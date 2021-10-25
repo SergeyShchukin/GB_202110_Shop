@@ -8,7 +8,7 @@
 	}
 
 	&__title {
-		@include font($font-family: Lato-Light, $font-size: 16px, $line-height: 19px, $text-transform: true);
+		@include font($font-weight: 300, $font-size: 16px, $line-height: 19px, $text-transform: true);
 		margin-bottom: 20px;
 	}
 
@@ -18,7 +18,7 @@
 		height: 45px;
 		padding-left: 17px;
 		margin-bottom: 21px;
-		@include font($font-family: Lato-Light, $font-size: 13px, $line-height: 16px);
+		@include font($font-weight: 300, $font-size: 13px, $line-height: 16px);
 		color: $light-gray-inp-text;
 		@include text-input($bkg-color: $white, $border: 1px solid $light-gray-inp-border, $placeholder-color: $black);
 
@@ -31,7 +31,7 @@
 		width: 100px;
 		height: 34px;
 		margin: 24px auto 57px auto;
-		@include font($font-family: Lato-Light, $font-size: 11px, $line-height: 13px, $text-transform: true);
+		@include font($font-weight: 300, $font-size: 11px, $line-height: 13px, $text-transform: true);
 		@include btn($color: $light-gray-inp-border);
 
 		@include tablet {

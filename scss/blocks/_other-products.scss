@@ -1,0 +1,25 @@
+.other-products {
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 128px 0;
+
+		@include tablet {
+			justify-content: space-evenly;
+		}
+
+		@include mobile {
+			flex-direction: column-reverse;
+			margin: 64px 0;
+		}
+	}
+
+	&__item {
+		&--last {
+			@include tablet {
+				display: none;
+			}
+		}
+	}
+}

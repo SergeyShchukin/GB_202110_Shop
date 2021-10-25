@@ -1,0 +1,62 @@
+.breadcrumb {
+	margin-bottom: 0;
+
+	&-item {
+		color: #636363;
+		@include font($font-weight: 300, $text-transform: true);
+
+		&.active {
+			color: $pink;
+			@include font($font-weight: 700, $text-transform: true);
+		}
+	}
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+	color: $dark-black;
+
+	&:hover {
+		color: $gray-hover;
+	}
+
+	&:focus {
+		color: $pink-border;
+	}
+
+	&:active {
+		color: $pink;
+	}
+}
+
+.btn-transparent.dropdown-toggle {
+	@include font($text-transform: true);
+	color: $gray;
+
+	@include mobile {
+		@include font($font-size: 10px, $line-height: 12px, $text-transform: true);
+	}
+}
+
+.dropdown-menu-transparent {
+	color: #636363;
+	background-color: $white;
+	border: none;
+}
+
+.dropdown-menu-transparent .dropdown-item {
+	color: #636363;
+	box-sizing: border-box;
+}
+
+.dropdown-menu-transparent .dropdown-item:hover,
+.dropdown-menu-transparent .dropdown-item:focus {
+	color: #fff;
+	background-color: $gray-hover;
+}
+
+.dropdown-menu-transparent .dropdown-item.active,
+.dropdown-menu-transparent .dropdown-item:active {
+	color: #fff;
+	background-color: $pink;
+}

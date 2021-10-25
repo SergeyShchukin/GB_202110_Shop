@@ -42,7 +42,7 @@
 		}
 
 		&-desc {
-			@include font($font-family: Lato-Light);
+			@include font($font-weight: 300);
 			color: $very-gray;
 			margin: 13px auto 18px auto;
 		}

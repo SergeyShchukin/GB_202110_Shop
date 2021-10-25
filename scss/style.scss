@@ -1,7 +1,9 @@
+@import './fonts';
 @import './reset';
 @import './varibles';
 @import './mixins';
 @import './general';
+@import './bootstrap-add';
 
 // header-start
 @import './blocks/header';
@@ -30,6 +32,12 @@
 @import './blocks/purchase-form';
 @import './blocks/shipping-form';
 // cart-end
+
+// product-start
+@import './blocks/product-slides';
+@import './blocks/product-description';
+@import './blocks/other-products';
+// product-end
 
 // footer-start
 @import './blocks/subscribe';

@@ -51,7 +51,7 @@
 		}
 
 		&-desc {
-			@include font($font-family: Lato-Light);
+			@include font($font-weight: 300);
 			color: $dark-white;
 			padding: 0 30px;
 			text-align: center;

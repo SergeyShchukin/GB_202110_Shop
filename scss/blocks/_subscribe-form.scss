@@ -18,10 +18,10 @@
 		color: $bluish-black;
 
 		&-title {
-			@include font($font-family: Lato-Bold, $font-size: 24px, $line-height: 40px, $text-transform: true);
+			@include font($font-weight: 700, $font-size: 24px, $line-height: 40px, $text-transform: true);
 
 			@include mobile {
-				@include font($font-family: Lato-Bold, $font-size: 24px, $line-height: 36px, $text-transform: true);
+				@include font($font-weight: 700, $font-size: 24px, $line-height: 36px, $text-transform: true);
 			}
 		}
 

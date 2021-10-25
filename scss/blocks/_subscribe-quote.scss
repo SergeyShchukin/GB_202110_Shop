@@ -33,7 +33,11 @@
 		}
 
 		&--italic {
-			font-family: Lato-Italic;
+			@include font($font-style: italic, $font-size: 20px, $line-height: 24px);
+
+			@include mobile {
+				@include font($font-style: italic, $font-size: 18px, $line-height: 22px);
+			}
 		}
 	}
 }

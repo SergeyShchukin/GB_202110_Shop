@@ -12,7 +12,7 @@
 	}
 
 	&__label {
-		@include font($font-family: Lato-Light, $font-size: 13px, $line-height: 16px);
+		@include font($font-weight: 300, $font-size: 13px, $line-height: 16px);
 		color: $dark-black;
 		margin-right: 20px;
 	}

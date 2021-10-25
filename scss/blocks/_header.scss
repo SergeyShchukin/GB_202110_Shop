@@ -92,7 +92,7 @@
 			background-color: $pink;
 			color: $white;
 
-			@include font($font-family: Lato-Light, $font-size: 12px, $line-height: 14px);
+			@include font($font-weight: 300, $font-size: 12px, $line-height: 14px);
 			@include flex-center();
 		}
 	}
