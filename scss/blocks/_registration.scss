@@ -19,7 +19,7 @@
 	}
 
 	&__form-title {
-		@include font($font-family: Lato-Light, $font-size: 16px, $line-height: 19px);
+		@include font($font-weight: 300, $font-size: 16px, $line-height: 19px);
 		color: $black;
 	}
 
@@ -31,7 +31,7 @@
 	}
 
 	&__form-label {
-		@include font($font-family: Lato-Light, $font-size: 13px, $line-height: 16px);
+		@include font($font-weight: 300, $font-size: 13px, $line-height: 16px);
 		color: $light-gray-inp-text;
 		margin-top: 15px;
 	}

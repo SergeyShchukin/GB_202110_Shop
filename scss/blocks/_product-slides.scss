@@ -1,0 +1,41 @@
+.product-slides {
+	height: 777px;
+
+	@include tablet {
+		height: 624px;
+	}
+
+	@include mobile {
+		height: 624px;
+	}
+
+	&__slide {
+		background-color: $light-gray-product-slide;
+		display: flex;
+		justify-content: center;
+
+		&-img {
+			margin-bottom: 42px;
+			margin-top: 11px;
+
+			@include tablet {
+				height: 565px;
+				width: auto;
+				margin-bottom: 30px;
+				margin-top: 30px;
+			}
+
+			@include mobile {
+				max-width: 374px;
+				height: auto;
+				width: 100%;
+				margin-bottom: 85px;
+				margin-top: 85px;
+			}
+		}
+	}
+
+	&__control {
+		font-size: 30px;
+	}
+}

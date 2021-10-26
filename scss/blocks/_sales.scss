@@ -82,13 +82,13 @@
 		}
 
 		&-text {
-			@include font($font-family: Lato-Light, $font-size: 16px, $line-height: 19px, $text-transform: true);
+			@include font($font-weight: 300, $font-size: 16px, $line-height: 19px, $text-transform: true);
 			text-align: center;
 			color: $white;
 		}
 
 		&-title {
-			@include font($font-family: Lato-Bold, $font-size: 24px, $line-height: 29px, $text-transform: true);
+			@include font($font-weight: 700, $font-size: 24px, $line-height: 29px, $text-transform: true);
 			text-align: center;
 			color: $pink;
 		}

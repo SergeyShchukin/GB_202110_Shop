@@ -27,7 +27,7 @@
 	}
 
 	&__title {
-		@include font($font-family: Lato-Bold, $text-transform: true);
+		@include font($font-weight: 700, $text-transform: true);
 		margin-bottom: 24px;
 	}
 

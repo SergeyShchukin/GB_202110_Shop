@@ -41,27 +41,27 @@
 	}
 
 	&__title {
-		@include font($font-family: Lato-Black, $font-size: 48px, $line-height: 58px, $text-transform: true);
+		@include font($font-weight: 900, $font-size: 48px, $line-height: 58px, $text-transform: true);
 
 		@include tablet {
-			@include font($font-family: Lato-Black, $font-size: 44px, $line-height: 53px);
+			@include font($font-weight: 900, $font-size: 44px, $line-height: 53px);
 		}
 
 		@include mobile {
-			@include font($font-family: Lato-Black, $font-size: 38px, $line-height: 46px);
+			@include font($font-weight: 900, $font-size: 38px, $line-height: 46px);
 		}
 	}
 
 	&__subtitle {
 		display: flex;
-		@include font($font-family: Lato-Black, $font-size: 32px, $line-height: 38px, $text-transform: true);
+		@include font($font-weight: 900, $font-size: 32px, $line-height: 38px, $text-transform: true);
 
 		@include tablet {
-			@include font($font-family: Lato-Black, $font-size: 24px, $line-height: 29px);
+			@include font($font-weight: 900, $font-size: 24px, $line-height: 29px);
 		}
 
 		@include mobile {
-			@include font($font-family: Lato-Black, $font-size: 20px, $line-height: 24px);
+			@include font($font-weight: 900, $font-size: 20px, $line-height: 24px);
 		}
 
 		&--pink {

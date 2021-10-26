@@ -47,12 +47,12 @@
 
 	&__btn {
 		@include btn();
-		@include font($font-family: Lato-Light, $text-transform: true);
+		@include font($font-weight: 300, $text-transform: true);
 		height: 49px;
 		width: 229px;
 
 		@include mobile {
-			@include font($font-family: Lato, $font-size: 12px, $line-height: 14px);
+			@include font($font-weight: 400, $font-size: 12px, $line-height: 14px);
 			width: 174px;
 		}
 	}

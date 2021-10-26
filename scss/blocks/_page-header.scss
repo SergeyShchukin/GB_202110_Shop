@@ -11,4 +11,20 @@
 			text-align: center;
 		}
 	}
+
+	&__wrp {
+		@include flex-center($justify-content: space-between);
+
+		@include mobile {
+			flex-direction: column;
+			justify-content: space-between;
+		}
+	}
+
+	&__nav {
+		@include mobile {
+			margin-top: 32px;
+			margin-bottom: 22px;
+		}
+	}
 }

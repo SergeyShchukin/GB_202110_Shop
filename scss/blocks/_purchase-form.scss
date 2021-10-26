@@ -62,7 +62,7 @@
 			}
 
 			&--grand {
-				@include font($font-family: Lato-Light, $font-size: 16px, $line-height: 19px, $text-transform: true);
+				@include font($font-weight: 300, $font-size: 16px, $line-height: 19px, $text-transform: true);
 				color: $black;
 				margin: 0 37px 21px 0;
 			}
@@ -80,13 +80,13 @@
 				&--grand {
 					width: 50px;
 					color: $pink;
-					@include font($font-family: Lato-Bold, $font-size: 16px, $line-height: 19px, $text-transform: true);
+					@include font($font-weight: 700, $font-size: 16px, $line-height: 19px, $text-transform: true);
 				}
 			}
 		}
 
 		&-btn {
-			@include font($font-family: Lato-Light, $font-size: 16px, $line-height: 19px, $text-transform: true);
+			@include font($font-weight: 300, $font-size: 16px, $line-height: 19px, $text-transform: true);
 			@include btn(false);
 			height: 50px;
 			width: 273px;
