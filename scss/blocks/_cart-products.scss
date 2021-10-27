@@ -48,7 +48,7 @@
 	&__btn {
 		@include btn();
 		@include font($font-weight: 300, $text-transform: true);
-		height: 49px;
+		min-height: 49px;
 		width: 229px;
 
 		@include mobile {

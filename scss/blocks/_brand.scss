@@ -24,7 +24,7 @@
 
 		@include mobile {
 			padding: 0 0 0 68px;
-			height: 363px;
+			min-height: 363px;
 		}
 
 		&::before {
