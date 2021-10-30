@@ -1,12 +1,12 @@
 .product-slides {
-	height: 777px;
+	min-height: 777px;
 
 	@include tablet {
-		height: 624px;
+		min-height: 624px;
 	}
 
 	@include mobile {
-		height: 624px;
+		min-height: 624px;
 	}
 
 	&__slide {

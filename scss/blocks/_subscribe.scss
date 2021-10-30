@@ -16,17 +16,17 @@
 	}
 
 	&__wrp {
-		height: 448px;
+		min-height: 448px;
 		@include flex-center($justify-content: space-between);
 
 		@include tablet {
-			height: 693px;
+			min-height: 693px;
 			flex-direction: column;
 			justify-content: center;
 		}
 
 		@include mobile {
-			height: 550px;
+			min-height: 550px;
 			flex-direction: column;
 			justify-content: center;
 		}

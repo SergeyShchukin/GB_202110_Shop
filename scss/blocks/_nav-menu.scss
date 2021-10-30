@@ -2,12 +2,23 @@
 	position: absolute;
 	z-index: 10;
 	right: 0;
+	top: -1000px;
 	width: 232px;
-	height: 764px;
+	min-height: 764px;
 	background-color: $white;
 	box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
 	padding: 37px 34px;
 	box-sizing: border-box;
+	visibility: hidden;
+
+	transition-property: top;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;
+
+	&--open {
+		top: 100%;
+		visibility: visible;
+	}
 
 	&__btn {
 		margin: 16px;

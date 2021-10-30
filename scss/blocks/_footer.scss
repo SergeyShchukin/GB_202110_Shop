@@ -2,11 +2,11 @@
 	background-color: $bluish-black;
 
 	&__wrp {
-		height: 79px;
+		min-height: 79px;
 		@include flex-center($justify-content: space-between);
 
 		@include mobile {
-			height: 143px;
+			min-height: 143px;
 			flex-direction: column-reverse;
 			justify-content: flex-start;
 		}

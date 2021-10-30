@@ -29,7 +29,7 @@
 
 	&__btn {
 		width: 100px;
-		height: 34px;
+		min-height: 34px;
 		margin: 24px auto 57px auto;
 		@include font($font-weight: 300, $font-size: 11px, $line-height: 13px, $text-transform: true);
 		@include btn($color: $light-gray-inp-border);

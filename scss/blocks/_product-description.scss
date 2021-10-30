@@ -2,7 +2,7 @@
 	position: relative;
 	@include flex-center();
 	flex-direction: column;
-	height: 601px;
+	min-height: 601px;
 	max-width: 1141px;
 	width: 100%;
 	background-color: $white;
@@ -10,7 +10,7 @@
 	border: 1px solid $light-gray-cart-input;
 
 	@include mobile {
-		height: 600px;
+		min-height: 600px;
 	}
 
 	&__collection {
@@ -88,7 +88,7 @@
 
 		&-btn {
 			width: 211px;
-			height: 47px;
+			min-height: 47px;
 			@include btn($border-color: $pink-border, $color: $pink-text);
 			@include flex-center();
 			margin: 49px auto 65px;

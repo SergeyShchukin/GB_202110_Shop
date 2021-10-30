@@ -17,6 +17,7 @@
 
 		&-controls {
 			@include flex-center();
+			position: relative;
 		}
 	}
 
@@ -26,12 +27,24 @@
 	}
 
 	&__search-form {
-		position: relative;
+		position: absolute;
+		left: 100%;
 		height: 30px;
-		width: 400px;
+		width: 0px;
+		top: -80px;
+		transition-property: top, width;
+		transition-duration: 0.5s;
+		transition-timing-function: ease-out;
+		visibility: hidden;
 
-		@include mobile {
-			width: 140px;
+		&--open {
+			top: 5px;
+			width: 400px;
+			visibility: visible;
+
+			@include mobile {
+				width: 140px;
+			}
 		}
 
 		&-input {

@@ -72,7 +72,7 @@
 	}
 
 	&__btn {
-		height: 47px;
+		min-height: 47px;
 		width: 211px;
 		@include btn($border-color: $pink-border, $color: $pink-text);
 		margin-top: 49px;

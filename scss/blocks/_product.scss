@@ -1,5 +1,5 @@
 .product {
-	height: 581px;
+	min-height: 581px;
 	width: 360px;
 	background-color: $very-dark-white;
 
@@ -25,7 +25,7 @@
 		@include flex-center($justify-content: space-around);
 		@include btn($border-color: $white, $color: $white);
 		width: 138px;
-		height: 43px;
+		min-height: 43px;
 
 		&::before {
 			content: url(../img/white-basket.svg);

@@ -3,22 +3,22 @@ const brand = document.getElementById('brand');
 const search = document.getElementById('search-form');
 
 const showMenu = () => {
-	menu.classList.add('display-show');
+	menu.classList.add('nav-menu--open');
 	brand?.classList.add('opacity-container');
 };
 
 const closeMenu = () => {
-	menu.classList.remove('display-show');
+	menu.classList.remove('nav-menu--open');
 	brand?.classList.remove('opacity-container');
 };
 
 const clickMenu = () => {
-	menu.classList.toggle('display-show');
+	menu.classList.toggle('nav-menu--open');
 	brand?.classList.toggle('opacity-container');
 };
 
 const showSearch = () => {
-	search.classList.toggle('display-show');
+	search.classList.toggle('header__search-form--open');
 };
 
 const searchButton = document.getElementById('search-btn');

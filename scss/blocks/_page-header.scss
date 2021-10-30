@@ -1,6 +1,6 @@
 .page-header {
 	background-color: $page-header-white;
-	height: 148px;
+	min-height: 148px;
 	@include flex-center();
 
 	&__title {
