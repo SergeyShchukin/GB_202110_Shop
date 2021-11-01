@@ -4,7 +4,9 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Shop</title>
+		<title>Shop - catalog</title>
+		<link rel="stylesheet" href="./css/all.css" />
+		<link rel="stylesheet" href="./css/bootstrap.css" />
 		<link rel="stylesheet" href="./css/style.css" />
 	</head>
 	<body class="page">
@@ -82,6 +84,11 @@
 							<rect width="15.8924" height="16" fill="white" transform="translate(8.1582 8)" />
 						</clipPath>
 					</defs>
+				</symbol>
+				<symbol id="filter" viewBox="0 0 15 10" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M0.833333 10H4.16667C4.625 10 5 9.625 5 9.16667C5 8.70833 4.625 8.33333 4.16667 8.33333H0.833333C0.375 8.33333 0 8.70833 0 9.16667C0 9.625 0.375 10 0.833333 10ZM0 0.833333C0 1.29167 0.375 1.66667 0.833333 1.66667H14.1667C14.625 1.66667 15 1.29167 15 0.833333C15 0.375 14.625 0 14.1667 0H0.833333C0.375 0 0 0.375 0 0.833333ZM0.833333 5.83333H9.16667C9.625 5.83333 10 5.45833 10 5C10 4.54167 9.625 4.16667 9.16667 4.16667H0.833333C0.375 4.16667 0 4.54167 0 5C0 5.45833 0.375 5.83333 0.833333 5.83333Z"
+					/>
 				</symbol>
 			</svg>
 		</div>
@@ -196,48 +203,113 @@
 			</nav>
 		</header>
 		<main class="main">
-			<section class="brand" id="brand">
-				<img class="brand__img" src="./img/man.jpg" alt="man" width="800" height="764" />
-				<div class="brand__wrp">
-					<h1 class="brand__title">
-						the brand<span class="brand__subtitle">of luxerious&nbsp;<span class="brand__subtitle brand__subtitle--pink">fashion</span></span>
-					</h1>
+			<section class="page-header">
+				<div class="my-container page-header__wrp">
+					<h1 class="page-header__title">new arrivals</h1>
+					<nav class="page-header__nav" aria-label="breadcrumb">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="#">home</a></li>
+							<li class="breadcrumb-item"><a href="#">men</a></li>
+							<li class="breadcrumb-item active" aria-current="page">new arrivals</li>
+						</ol>
+					</nav>
 				</div>
 			</section>
-			<section class="my-container sales">
-				<h2 class="sales__heading visually-hidden">sales</h2>
-				<ul class="sales__list">
-					<li class="sales__item sales__item--women">
-						<a href="#" class="sales__item-link">
-							<p class="sales__item-text">30% off</p>
-							<h3 class="sales__item-title">for women</h3>
-						</a>
-					</li>
-					<li class="sales__item sales__item--men">
-						<a href="#" class="sales__item-link">
-							<p class="sales__item-text">hot deal</p>
-							<h3 class="sales__item-title">for men</h3>
-						</a>
-					</li>
-					<li class="sales__item sales__item--kids">
-						<a href="#" class="sales__item-link">
-							<p class="sales__item-text">new arrivals</p>
-							<h3 class="sales__item-title">for kids</h3>
-						</a>
-					</li>
-					<li class="sales__item sales__item--accesories">
-						<a href="#" class="sales__item-link">
-							<p class="sales__item-text">luxirous & trendy</p>
-							<h3 class="sales__item-title">accesories</h3>
-						</a>
-					</li>
-				</ul>
-			</section>
-			<section class="my-container products">
-				<h2 class="products__title">Fetured Items</h2>
-				<p class="products__title-desc">Shop for items based on what we featured in this week</p>
-				<ul class="products__list">
-					<li class="products__item product">
+			<section class="my-container products-grid">
+				<h2 class="products-grid__title visually-hidden">all products</h2>
+				<div class="products-grid__filters">
+					<div class="products-grid__filters-accordion accordion-drpdwn">
+						<div class="accordion-drpdwn__control" id="filter-accordion">
+							<p class="accordion-drpdwn__control-title">filter</p>
+							<svg class="accordion-drpdwn__control-svg">
+								<use xlink:href="#filter"></use>
+							</svg>
+						</div>
+						<ul class="accordion-drpdwn__type-list" id="filter-accordion-drpdwn">
+							<li class="accordion-drpdwn__type">
+								<div class="accordion-drpdwn__type-title-wrp">
+									<h3 class="accordion-drpdwn__type-title">category</h3>
+								</div>
+								<ul class="accordion-drpdwn__subtype-list">
+									<li class="accordion-drpdwn__subtype-item">Accessories</li>
+									<li class="accordion-drpdwn__subtype-item">Bags</li>
+									<li class="accordion-drpdwn__subtype-item">Denim</li>
+									<li class="accordion-drpdwn__subtype-item">Hoodies & Sweatshirts</li>
+									<li class="accordion-drpdwn__subtype-item">Jackets & Coats</li>
+									<li class="accordion-drpdwn__subtype-item">Polos</li>
+									<li class="accordion-drpdwn__subtype-item">Shirts</li>
+									<li class="accordion-drpdwn__subtype-item">Shoes</li>
+									<li class="accordion-drpdwn__subtype-item">Sweaters & Knits</li>
+									<li class="accordion-drpdwn__subtype-item">T-Shirts</li>
+									<li class="accordion-drpdwn__subtype-item">Tanks</li>
+								</ul>
+							</li>
+							<li class="accordion-drpdwn__type">
+								<div class="accordion-drpdwn__type-title-wrp">
+									<h3 class="accordion-drpdwn__type-title">brand</h3>
+								</div>
+							</li>
+							<li class="accordion-drpdwn__type">
+								<div class="accordion-drpdwn__type-title-wrp">
+									<h3 class="accordion-drpdwn__type-title">designer</h3>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="products-grid__filters-drpdwns">
+						<div class="dropdown">
+							<button
+								class="btn btn-transparent dropdown-toggle"
+								type="button"
+								id="dropdownTrendingButton"
+								data-bs-toggle="dropdown"
+								aria-expanded="false"
+							>
+								trending now
+							</button>
+							<ul class="dropdown-menu dropdown-menu-transparent" aria-labelledby="dropdownTrendingButton">
+								<li><a class="dropdown-item active" href="#">trending</a></li>
+								<li><a class="dropdown-item" href="#">trending</a></li>
+								<li><a class="dropdown-item" href="#">trending</a></li>
+							</ul>
+						</div>
+						<div class="dropdown">
+							<button
+								class="btn btn-transparent dropdown-toggle"
+								type="button"
+								id="dropdownSizeButton"
+								data-bs-toggle="dropdown"
+								aria-expanded="false"
+							>
+								size
+							</button>
+							<ul class="dropdown-menu dropdown-menu-transparent" aria-labelledby="dropdownSizeButton">
+								<li><a class="dropdown-item active" href="#">XS</a></li>
+								<li><a class="dropdown-item" href="#">S</a></li>
+								<li><a class="dropdown-item" href="#">M</a></li>
+								<li><a class="dropdown-item" href="#">L</a></li>
+							</ul>
+						</div>
+						<div class="dropdown">
+							<button
+								class="btn btn-transparent dropdown-toggle"
+								type="button"
+								id="dropdownPriceButton"
+								data-bs-toggle="dropdown"
+								aria-expanded="false"
+							>
+								price
+							</button>
+							<ul class="dropdown-menu dropdown-menu-transparent" aria-labelledby="dropdownPriceButton">
+								<li><a class="dropdown-item active" href="#">100</a></li>
+								<li><a class="dropdown-item" href="#">200</a></li>
+								<li><a class="dropdown-item" href="#">300</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<ul class="products-grid__list">
+					<li class="products-grid__item product">
 						<div class="product__image-box">
 							<img class="product__image" src="./img/product-1.jpg" alt="product-1" width="360" height="420" />
 							<button class="product__btn" type="button" id="product-1-btn">
@@ -252,10 +324,10 @@
 							<p class="product__info-price">$52.00</p>
 						</div>
 					</li>
-					<li class="products__item product">
+					<li class="products-grid__item product">
 						<div class="product__image-box">
-							<img class="product__image" src="./img/product-2.jpg" alt="product-2" width="360" height="420" />
-							<button class="product__btn" type="button" id="product-2-btn">
+							<img class="product__image" src="./img/product-7.jpg" alt="product-7" width="360" height="420" />
+							<button class="product__btn" type="button" id="product-7-btn">
 								<span class="product__btn-text">Add to Cart</span>
 							</button>
 						</div>
@@ -267,7 +339,7 @@
 							<p class="product__info-price">$52.00</p>
 						</div>
 					</li>
-					<li class="products__item product">
+					<li class="products-grid__item product">
 						<div class="product__image-box">
 							<img class="product__image" src="./img/product-3.jpg" alt="product-3" width="360" height="420" />
 							<button class="product__btn" type="button" id="product-3-btn">
@@ -282,7 +354,7 @@
 							<p class="product__info-price">$52.00</p>
 						</div>
 					</li>
-					<li class="products__item product">
+					<li class="products-grid__item product">
 						<div class="product__image-box">
 							<img class="product__image" src="./img/product-4.jpg" alt="product-4" width="360" height="420" />
 							<button class="product__btn" type="button" id="product-4-btn">
@@ -297,10 +369,10 @@
 							<p class="product__info-price">$52.00</p>
 						</div>
 					</li>
-					<li class="products__item product">
+					<li class="products-grid__item product">
 						<div class="product__image-box">
-							<img class="product__image" src="./img/product-5.jpg" alt="product-5" width="360" height="420" />
-							<button class="product__btn" type="button" id="product-5-btn">
+							<img class="product__image" src="./img/product-9.jpg" alt="product-9" width="360" height="420" />
+							<button class="product__btn" type="button" id="product-9-btn">
 								<span class="product__btn-text">Add to Cart</span>
 							</button>
 						</div>
@@ -312,10 +384,55 @@
 							<p class="product__info-price">$52.00</p>
 						</div>
 					</li>
-					<li class="products__item product">
+					<li class="products-grid__item product">
 						<div class="product__image-box">
-							<img class="product__image" src="./img/product-6.jpg" alt="product-6" width="360" height="420" />
-							<button class="product__btn" type="button" id="product-6-btn">
+							<img class="product__image" src="./img/product-10.jpg" alt="product-10" width="360" height="420" />
+							<button class="product__btn" type="button" id="product-10-btn">
+								<span class="product__btn-text">Add to Cart</span>
+							</button>
+						</div>
+						<div class="product__info">
+							<h3 class="product__info-title">ellery x m'o capsule</h3>
+							<p class="product__info-desc">
+								Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.
+							</p>
+							<p class="product__info-price">$52.00</p>
+						</div>
+					</li>
+					<li class="products-grid__item product">
+						<div class="product__image-box">
+							<img class="product__image" src="./img/product-11.jpg" alt="product-11" width="360" height="420" />
+							<button class="product__btn" type="button" id="product-11-btn">
+								<span class="product__btn-text">Add to Cart</span>
+							</button>
+						</div>
+						<div class="product__info">
+							<h3 class="product__info-title">ellery x m'o capsule</h3>
+							<p class="product__info-desc">
+								Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.
+							</p>
+							<p class="product__info-price">$52.00</p>
+						</div>
+					</li>
+					<li class="products-grid__item product">
+						<div class="product__image-box">
+							<img class="product__image" src="./img/product-12.jpg" alt="product-12" width="360" height="420" />
+							<button class="product__btn" type="button" id="product-12-btn">
+								<span class="product__btn-text">Add to Cart</span>
+							</button>
+						</div>
+						<div class="product__info">
+							<h3 class="product__info-title">ellery x m'o capsule</h3>
+							<p class="product__info-desc">
+								Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.
+							</p>
+							<p class="product__info-price">$52.00</p>
+						</div>
+					</li>
+					<li class="products-grid__item product">
+						<div class="product__image-box">
+							<img class="product__image" src="./img/product-13.jpg" alt="product-13" width="360" height="420" />
+							<button class="product__btn" type="button" id="product-13-btn">
 								<span class="product__btn-text">Add to Cart</span>
 							</button>
 						</div>
@@ -328,24 +445,41 @@
 						</div>
 					</li>
 				</ul>
-				<button class="products__btn" type="button" onclick="window.location.href='./catalog.html'">Browse All Product</button>
-			</section>
-			<section class="offers">
-				<h2 class="visually-hidden">offers</h2>
-				<ul class="my-container offers__list">
-					<li class="offers__item offers__item--truck">
-						<h3 class="offers__item-title">Free Delivery</h3>
-						<p class="offers__item-desc">Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
-					</li>
-					<li class="offers__item offers__item--percent">
-						<h3 class="offers__item-title">Sales & discounts</h3>
-						<p class="offers__item-desc">Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
-					</li>
-					<li class="offers__item offers__item--crown">
-						<h3 class="offers__item-title">Quality assurance</h3>
-						<p class="offers__item-desc">Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
-					</li>
-				</ul>
+				<div class="products-grid__pages">
+					<button
+						class="products-grid__pages-control products-grid__pages-control--prev"
+						type="button"
+						data-bs-target="#carouselExampleControls"
+						data-bs-slide="prev"
+					>
+						<span class="products-grid__pages-control">
+							<i class="fas fa-chevron-left"></i>
+						</span>
+						<span class="visually-hidden">Предыдущий</span>
+					</button>
+					<button class="products-grid__pages-control products-grid__pages-control--page products-grid__pages-control--active" type="button">
+						<span>1</span>
+					</button>
+					<button class="products-grid__pages-control products-grid__pages-control--page" type="button"><span>2</span></button>
+					<button class="products-grid__pages-control products-grid__pages-control--page" type="button"><span>3</span></button>
+					<button class="products-grid__pages-control products-grid__pages-control--page" type="button"><span>4</span></button>
+					<button class="products-grid__pages-control products-grid__pages-control--page" type="button"><span>5</span></button>
+					<button class="products-grid__pages-control products-grid__pages-control--page products-grid__pages-control--ellipsis" type="button">
+						<span>6</span>
+					</button>
+					<button class="products-grid__pages-control products-grid__pages-control--page" type="button"><span>20</span></button>
+					<button
+						class="products-grid__pages-control products-grid__pages-control--next"
+						type="button"
+						data-bs-target="#carouselExampleControls"
+						data-bs-slide="next"
+					>
+						<span class="products-grid__pages-control">
+							<i class="fas fa-chevron-right"></i>
+						</span>
+						<span class="visually-hidden">Следующий</span>
+					</button>
+				</div>
 			</section>
 		</main>
 		<footer class="footer">
@@ -408,6 +542,7 @@
 				</ul>
 			</section>
 		</footer>
+		<script src="./scripts/bootstrap.bundle.js"></script>
 		<script src="./scripts/index.js"></script>
 	</body>
 </html>

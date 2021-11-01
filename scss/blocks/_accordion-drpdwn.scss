@@ -1,0 +1,88 @@
+.accordion-drpdwn {
+	position: relative;
+
+	&__control {
+		display: flex;
+		align-items: baseline;
+
+		&-title {
+			@include font($font-weight: 600, $text-transform: true);
+			color: $black;
+
+			@include mobile {
+				display: none;
+			}
+		}
+
+		&-svg {
+			width: 15px;
+			height: 10px;
+			fill: $black;
+			margin-left: 11px;
+
+			@include mobile {
+				width: 38px;
+				height: 25px;
+				margin-left: 0;
+			}
+		}
+
+		&--active &-title {
+			color: $pink;
+		}
+
+		&--active &-svg {
+			fill: $pink;
+		}
+	}
+
+	&__type-list {
+		position: absolute;
+		display: none;
+		z-index: 4;
+		box-sizing: border-box;
+		width: 360px;
+		padding: 16px;
+		background-color: $white;
+		box-shadow: 6px 4px 35px 0px #00000036;
+
+		&--show {
+			display: block;
+		}
+	}
+
+	&__type {
+		&-title-wrp {
+			height: 37px;
+			width: 100%;
+			margin-top: 16px;
+			box-sizing: border-box;
+			border-bottom: 1px solid $light-gray-cart-border;
+			display: flex;
+			align-items: center;
+
+			&::before {
+				content: '';
+				width: 5px;
+				height: 100%;
+				background-color: $pink;
+			}
+		}
+
+		&-title {
+			@include font($text-transform: true);
+			color: $pink;
+			margin-left: 11px;
+		}
+	}
+
+	&__subtype-list {
+		padding: 19px 0 3px 0;
+	}
+
+	&__subtype-item {
+		@include font();
+		color: $gray;
+		padding: 5px 0 5px 16px;
+	}
+}
