@@ -37,4 +37,12 @@ const sendToBasket = () => {
 	basketCnt.innerText = basketCount;
 };
 
-[...Array(6).keys()].forEach((productId) => document.getElementById(`product-${productId + 1}-btn`)?.addEventListener('click', sendToBasket));
+[...Array(13).keys()].forEach((productId) => document.getElementById(`product-${productId + 1}-btn`)?.addEventListener('click', sendToBasket));
+
+const filterAccordionControl = document.getElementById('filter-accordion');
+const filterAccordionDrpdwn = document.getElementById('filter-accordion-drpdwn');
+const filterAccordionActivate = () => {
+	filterAccordionControl.classList.toggle('accordion-drpdwn__control--active');
+	filterAccordionDrpdwn.classList.toggle('accordion-drpdwn__type-list--show');
+};
+filterAccordionControl.addEventListener('click', filterAccordionActivate);

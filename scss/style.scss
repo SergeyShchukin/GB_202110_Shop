@@ -39,6 +39,11 @@
 @import './blocks/other-products';
 // product-end
 
+// catalog-start
+@import './blocks/products-grid';
+@import './blocks/accordion-drpdwn';
+// catalog-end
+
 // footer-start
 @import './blocks/subscribe';
 @import './blocks/subscribe-quote';
